@@ -1,0 +1,3835 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "Eplan.EplApi.EServices"
+    </assembly>
+    <members>
+        <member name="M:Eplan.EplApi.EServices.Ged.BaseInteractionAttribute.Finalize">
+            <summary>
+Non-deterministic Finalizer of BaseInteractionAttribute object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.BaseInteractionAttribute.Dispose">
+            <summary>
+Destructor for deterministic finalization of BaseInteractionAttribute object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.BaseInteractionAttribute.#ctor(System.String)">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.BaseInteractionAttribute">
+            <summary> 
+TODO
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionAttribute.Prio">
+            <summary>
+Priority of interaction.
+</summary>
+            <remarks>
+If interaction is started while another interaction is running then the one with the lower
+priority will be deactivated until all interactions with higher priority will be finished.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionAttribute.Ordinal">
+            <summary>
+Overload level of interaction.
+</summary>
+            <remarks>
+The new interaction can overwrite an existing interaction which has the same Name 
+and if the ordinal number of the new interaction is higher.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionAttribute.NameOfBaseInteraction">
+            <summary>
+Name of interaction which will be override.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionAttribute.Name">
+            <summary>
+Name under interaction will be registered.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionAttribute.Finalize">
+            <summary>
+Non-deterministic Finalizer of InteractionAttribute object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionAttribute.Dispose">
+            <summary>
+Destructor for deterministic finalization of InteractionAttribute object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionAttribute.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.InteractionAttribute">
+            <summary> 
+TODO
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InsertInteraction.InsertedPlacements">
+            <summary>
+Returns placements inserted by the base interaction.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InsertInteraction.IsSelectionInteraction">
+            <summary>
+Returns true, if interaction is a helper interaction to select placements.
+</summary>
+            <remarks>By default it returns <c>false</c></remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InsertInteraction.IsInsertInteraction">
+            <summary>
+Returns true, if interaction is used to insert one ore more placements on page.
+</summary>
+            <remarks>By default it returns <c>true</c></remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InsertInteraction.Finalize">
+            <summary>
+Non-deterministic Finalizer of InsertInteraction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InsertInteraction.Dispose">
+            <summary>
+Destructor for deterministic finalization of InsertInteraction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InsertInteraction.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.InsertInteraction">
+            <summary> 
+Base class for specific interactions that inserts objects.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.Store(Eplan.EplApi.EServices.SubProject)">
+            <summary>
+Inserts filed-off subproject back into the project.
+</summary>
+            <remarks>
+Subproject can be imported only if SubProject.IsStorePossible is <c>true</c>.
+</remarks>
+            <exception cref="T:System.InvalidOperationException">Thrown if subproject is in incorrect state and import is not possible.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when parameter is null.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.FileOff(Eplan.EplApi.EServices.SubProject)">
+            <summary>
+Creates subproject, i.e. file it off from the project.
+</summary>
+            <remarks>
+Subproject can be exported only if SubProject.IsFileOffPossible is <c>true</c>.
+</remarks>
+            <exception cref="T:System.InvalidOperationException">Thrown if subproject is in incorrect state and export is not possible.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when parameter is null.</exception>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProjectsCollection.Count">
+            <summary>
+Returns number of sub projects.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProjectsCollection.Item(System.Int32)">
+            <summary>
+Gets the element at the specified index.
+</summary>
+            <exception cref="T:System.IndexOutOfRangeException">The exception that is thrown when an attempt is made to access an element of an array with an index that is outside the bounds of the array.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.GetEnumerator">
+            <summary>
+Returns an enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.GetEnumerator2">
+            <summary>
+Returns an enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.Finalize">
+            <summary>
+Non-deterministic Finalizer of SubProjectsCollection object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.Dispose">
+            <summary>
+Destructor for deterministic finalization of SubProjectsCollection object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProjectsCollection.#ctor(Eplan.EplApi.DataModel.Project)">
+            <summary> 
+Default constructor.
+</summary>
+            <param name="pProject">Source project for subprojects.</param>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.SubProjectsCollection">
+            <summary> 
+Represents collection of subprojects specified by the defined working sections that are possible for given project.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PotentialVerification.FilterConfigPath">
+            <summery>
+Returns the settings path to this setting where the possible range of the filter is defined.
+</summery>
+            <remarks>
+This property does not defined the user choice of the filter.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PotentialVerification.AdditionalObjectsFilter">
+            <summary>
+Type of class which filters objects that are additionally passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>
+Set of types that can be passed to be verified, is created from type returned by this property and all type that inherit from it.
+</para>
+                <para>
+Depending on the value of the filter, framework can also pass additional object to be checked. They are objects of classes:
+Connections, DeviceListEntry, ArticleReference and PlanningSegment.
+</para>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>
+While check of whole project is done all pages and installation spaces are always passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method,
+regardless value of this property.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PotentialVerification.ObjectsFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PotentialVerification.ObjectsTypeFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PotentialVerification.GetAllPotentialsWithSameName(Eplan.EplApi.DataModel.Placement,System.Collections.ArrayList@)">
+            <summary>
+Returns all potentials of the project with the same name.
+Can be called within the Execute function. 
+</summary>
+            <remarks>
+This function uses an internal buffer mechanism and is therefore very quick when 
+called several times in a check routine.
+</remarks>
+            <param name="oPotential">
+The potential for which all other potentials with the same name are to be searched.
+</param>
+            <param name="colPotentials">
+The list of results giving all potentials with the same name.
+</param>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PotentialVerification">
+            <summary>
+Base class for specific verification classes that only check
+potentials.
+
+
+</summary>
+            <remarks>
+\ \ 
+
+When using following inheritance hierarchy :
+
+Interface, inheriting abstract class, and then normal class,
+(like IMessage-\&gt;PotentialVerification -\&gt;VerificationExample)
+under .Net 2.0 there is a run-time error while loading add-in
+("Unable to load one or more of the requested types. Retrieve
+the LoaderExceptions property for more information")
+
+
+
+Current workaround is to add interface names after class
+identifier, so such declaration as:
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification
+{}
+</code>
+
+Should be substituted by :
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification : IVerification : IMessage
+{}
+</code></remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IPotentialVerification">
+            <summary>
+Interface for a special verification class.
+</summary>
+        </member>
+        <member name="M:DMInPlaceContext.getMousePosY">
+            <summary>
+Get mouse position y in screen coordinates.
+</summary>
+            <returns>y-position of mouse </returns>
+        </member>
+        <member name="M:DMInPlaceContext.getMousePosX">
+            <summary>
+Get mouse position x in screen coordinates.
+</summary>
+            <returns>x-position of mouse </returns>
+        </member>
+        <member name="M:DMInPlaceContext.setMousePosition(System.Int32!System.Runtime.CompilerServices.IsConst,System.Int32!System.Runtime.CompilerServices.IsConst)">
+            <summary>
+Set the mouse position in screen coordinates
+</summary>
+            <param name="x">x-position</param>
+            <param name="y">y-position</param>
+        </member>
+        <member name="M:DMInPlaceContext.getY">
+            <summary>
+Get y-position of dialog
+</summary>
+            <returns>The y-position</returns>
+        </member>
+        <member name="M:DMInPlaceContext.setY(System.Int32)">
+            <summary>
+Set y-position of dialog
+</summary>
+            <param name="y">y-position</param>
+        </member>
+        <member name="M:DMInPlaceContext.getX">
+            <summary>
+Get x-position of dialog
+</summary>
+            <returns>The x-position</returns>
+        </member>
+        <member name="M:DMInPlaceContext.setX(System.Int32)">
+            <summary>
+Set x-position of dialog
+</summary>
+            <param name="x">x-position</param>
+        </member>
+        <member name="F:SUM_SUBTOTAL">
+CR 7348: Summierungen ////////
+</member>
+        <member name="M:DmgDimensionCircle.internalGetGripPoints(std.vector&lt;DmgGripPointInfo&gt;*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,IDmgDrawingContext*)">
+            <summary>
+get the grip points
+</summary>
+        </member>
+        <member name="M:DmgDimensionCircle.internalFindNearestSnapPoint(System.Int32,EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EPoint*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,Dmg.DmgSnapTypes*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,IDmgDrawingContext*)">
+            <summary>
+Method searches for snap points around pntLocation. If a snap is found with a distance smaller than dMniDist then true is returned and dMinDist,
+pntFound and nFoundType are actualised.
+</summary>
+        </member>
+        <member name="M:DmgDimensionCircle.isDiameterMeasured">
+            <summary>
+Find out if diameter or radius is measured.
+</summary>
+            <returns>True if diameter is measured, otherwise false.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setTypeOfMeasure(System.Boolean)">
+            <summary>
+Set type of measure i.e. if radius or diamete should be measured.
+</summary>
+            <param name="bMeasDiameter">If true, diameter is measured otherwise radius.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getStyleOfCircleDimension">
+            <summary>
+Get the style of circle dimension.
+</summary>
+            <returns>The style of circle dimension.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setStyleOfCircleDimension(Dmg.DmgTypeOfCircleDimension!System.Runtime.CompilerServices.IsConst)">
+            <summary>
+Set the style of the circle dimension.
+</summary>
+            <param name="nType">The style of circle dimension.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.setDimensionTextPosition(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the dimension text position.
+</summary>
+            <param name="pntTextPosition">The dimension text position.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getDimensionTextPosition">
+            <summary>
+Get the dimension text position.
+</summary>
+            <returns>The dimension text position.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setDimensionText(EString!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the dimension text.
+</summary>
+            <param name="esDimensionText">The dimension text.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getDimensionText">
+            <summary>
+Get dimension text.
+</summary>
+            <returns>The dimension text.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.getPointExtensionLine">
+            <summary>
+Get vertex of extension line.
+</summary>
+            <returns>the vertex of extension line.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setPointExtensionLine(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the vertex of extension line.
+</summary>
+            <param name="pntExtensionLine">Vertex extension line.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getVertex">
+            <summary>
+Get the vertex of dimension line.
+</summary>
+            <returns>The vertex.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setVertex(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the vertex. This indicates the vertex of dimension line.
+</summary>
+            <param name="pntVertex">The vertex.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getCenter">
+            <summary>
+Get the center.
+</summary>
+            <returns>the center of circle or circular arc.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setCenter(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the center of the circle or circular arc.
+</summary>
+            <param name="pntCenter">The center of circle or circular arc.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getDimensionPosition">
+            <summary>
+Get the dimension position.
+</summary>
+            <returns>The dimension position.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setDimensionPosition(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the dimension position. This position indicates the vertex of dimension line on the circle.
+</summary>
+            <param name="pntDimensionPosition">The dimension position.</param>
+        </member>
+        <member name="M:DmgDimensionCircle.getDimensionPoint">
+            <summary>
+Get the dimension point. This point indicates the vertex of dimension line on the circle.
+</summary>
+            <returns>The dimension point.</returns>
+        </member>
+        <member name="M:DmgDimensionCircle.setDimensionPoint(DmgDimensionPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+Set the dimension point. This point indicates the vertex of dimension line on the circle.
+</summary>
+            <param name="dimDimPoint">The dimension point to set.</param>
+        </member>
+        <member name="T:DmgSpecialMirrorRotateTexts">
+            <summary>
+This is a class for transforming texts in a special manner used e.g. for
+the change of norms, for mirroring in the ged or by the symbol editor.
+You can mirror texts or ratate texts by 90, 180 and 270 degrees.
+</summary>
+        </member>
+        <member name="M:EGeoSpline.getSplineAsPolyline(EGeoPolyLine*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.UInt32)">
+            <summary>
+methods converts spline into a polyline
+</summary>
+            <param name="geoPoly">converted polyline </param>
+            <param name="nSegments">number of segments of new created polyline, default:128
+	Created polyine may contain only one segment, if control points of bezier curve are on the line
+	between pntstart and pntend</param>
+            <returns>true if everything is allright </returns>
+        </member>
+        <member name="F:Aflicense.m_bIsLicensingAvailable">
+is licensing is available
+</member>
+        <member name="M:Aflicense.isLicensingAvailable">
+Checks if licensing is available
+</member>
+        <member name="F:AfApplication.sm_Application">
+************************************************************************
+************************************************************************
+</member>
+        <member name="T:EUnicodeConverter">
+EUnicodeConverter.h
+</member>
+        <member name="M:op_BitwiseAnd(IEArchive*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EColor*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+global operator to write an EColor into an archive or to read it from
+</member>
+        <member name="M:EBox3D.getCenter">
+get box center point 
+</member>
+        <member name="M:EBox3D.getDiagonal">
+get box direction vector.
+</member>
+        <member name="M:EPosition3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+conversion from eCabinet/Triga
+</member>
+        <member name="M:EPosition3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+explicit set
+</member>
+        <member name="M:EPosition3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+conversion from eCabinet/Triga
+</member>
+        <member name="M:EPosition3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+explicit constructor
+</member>
+        <member name="M:EPosition3D.#ctor(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+conversion from ETransform3D
+</member>
+        <member name="M:EPosition3D.#ctor(EPosition3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EPosition3D.#ctor(EPosition3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EPosition3D.#ctor">
+default constructor
+</member>
+        <member name="F:EArc3D.m_Angle">
+angle to End-Point
+</member>
+        <member name="F:EArc3D.m_StartVector">
+Start-Point
+</member>
+        <member name="F:EArc3D.m_Normal">
+normal vector 
+</member>
+        <member name="F:EArc3D.m_Origin">
+center point
+</member>
+        <member name="M:EArc3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+Methodes from Interface ICurve3D
+	@see : ICurve3D
+
+</member>
+        <member name="M:EPath3D.getEndPoint">
+Interface Function
+</member>
+        <member name="M:EPath3D.getStartPoint">
+Interface Function
+</member>
+        <member name="M:EPath3D.isClosed">
+Interface Function
+</member>
+        <member name="M:EContour3D.triangulate(std.vector&lt;ETriangle3D&gt;*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+triangulate closed contour
+</member>
+        <member name="M:EContour3D.getEndPoint">
+Interface Function
+</member>
+        <member name="M:EContour3D.getStartPoint">
+Interface Function
+</member>
+        <member name="M:EContour3D.isClosed">
+Interface Function
+</member>
+        <member name="T:EPointArray3D">
+represents an array of points
+
+</member>
+        <member name="M:EBoundingBox3D.checkBoxZRange(EBoundingBox3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+special Function to compare the Z-range of two bounding boxes. 
+Needed for hidden line calculation.
+returns a negative value if this Z-range is closer to 0 than bb
+returns 0 if Z-ranges overlap
+returns a positive value if bb Z-range is closer to 0 than this 
+
+</member>
+        <member name="M:EBoundingBox3D.isInsideBoxXY(EBoundingBox3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+special Function to compare two bounding boxes by ignoring z-axis. 
+Needed for hidden line calculation.
+True if this is inside or touching bb
+False if this and bb are disjunct. 
+
+</member>
+        <member name="M:EBoundingBox3D.isInside(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Int32*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Int32*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+special function for polygon inside/outside test:
+		return value is true if point is inside, else
+		LowCount is increased, if p is left, lower, nearer then LDF
+		HighCount is increased, if p is right, upper, farer then RUB
+
+</member>
+        <member name="M:EBoundingBox3D.getSize">
+returns getLength(GetDiagonale())
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getCenter">
+returns getRub()-getLdf()/2
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getDiagonal">
+returns getRub()-getLdf()
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getRub">
+returns right, up back Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getRuf">
+returns right, up, front Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getRdb">
+returns right, down, back Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getRdf">
+returns right, down, front Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getLub">
+returns left, up, back Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getLuf">
+returns left, up, front Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getLdb">
+returns left, down, back Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.getLdf">
+returns left, down, front Point of the BoundingBox
+throw exception if (!isSet())
+</member>
+        <member name="M:EBoundingBox3D.isSet">
+check, if at least one point was set (is false after clear)
+</member>
+        <member name="M:EBoundingBox3D.merge(EBoundingBox3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+adds another BoundingBox
+</member>
+        <member name="M:EBoundingBox3D.merge(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+adds one Point
+</member>
+        <member name="M:EBoundingBox3D.clear">
+initializes the BoundingBox empty
+</member>
+        <member name="M:EBoundingBox3D.set(ERectangle!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double,System.Double)">
+initializes the BoundingBox whith a 2D rectangle and the z range
+</member>
+        <member name="M:EBoundingBox3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+initializes the BoundingBox whith to corner points
+</member>
+        <member name="M:EBoundingBox3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+initializes the BoundingBox as a cube with edges of "size" length
+</member>
+        <member name="M:EBoundingBox3D.set(EBoundingBox3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+initializes the BoundingBox by another BoundingBox
+</member>
+        <member name="M:EBoundingBox3D.set(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+initializes the BoundingBox with one point (size()=0)
+</member>
+        <member name="M:EPlane3D.getDirectedDistance(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+distance in direction of normal is positive, other side negative
+this value will be negative(!) if the point is opposite to the nomal of the plane
+</member>
+        <member name="M:EPlane3D.intersect(EPlane3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,ERay3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+intersect Plane with plane; result is a ray 
+</member>
+        <member name="M:EPlane3D.intersect(ERay3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EPoint3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+intersect ray with plane
+</member>
+        <member name="M:EPlane3D.project(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+projected vector on plane
+</member>
+        <member name="M:EPlane3D.project(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+projected point on plane
+</member>
+        <member name="M:EPlane3D.getPointFromPlane(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+Plane coordinates to world
+</member>
+        <member name="M:EPlane3D.getPointOnPlane(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EPoint*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+World coordinates to plane, true if exact on plane, else projected point
+</member>
+        <member name="M:EPlane3D.getDistance(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate minimal distance between Point and Plane
+</member>
+        <member name="M:EPlane3D.getDistanceSq(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate minimal distance between Point and Plane
+</member>
+        <member name="M:EPlane3D.transform(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform plane
+</member>
+        <member name="M:EPlane3D.isOn(ERay3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test if ray is flat in the plane
+</member>
+        <member name="M:EPlane3D.isOn(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test if vector is flat in the plane
+</member>
+        <member name="M:EPlane3D.isOn(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test if point is on Plane
+</member>
+        <member name="M:EPlane3D.isParallel(EPlane3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+check for parallel Planes, true if normals are colinear 
+</member>
+        <member name="M:EPlane3D.op_Equality(EPlane3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+Plane equality operator.
+</member>
+        <member name="M:EPlane3D.getAxisV">
+Plane V-Axis (calculated from normal)
+</member>
+        <member name="M:EPlane3D.getAxisU">
+Plane U-Axis (calculated from normal)
+</member>
+        <member name="M:EPlane3D.getOrigin">
+Plane getOrigin
+</member>
+        <member name="M:EPlane3D.getNormal">
+Plane normal vector.
+</member>
+        <member name="M:ERay3D.rayDistance(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+pkt is projected orthogonal to the ray. then the directed distance between the ray origin and this projection is calculated
+	this is reverse to getPoint(dbl); 
+
+pkt is projected orthogonal to the ray. then the directed distance between the ray origin and this projection is calculated
+</member>
+        <member name="M:ERay3D.rayDistanceSq(ERay3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates distance between two rays
+if result ==0.0, rays intersect, result has coordinates of the intersection point
+if result &gt;0.0, the rays don't intersect, result has coordinates of the point of minimal distance on ray1.
+
+</member>
+        <member name="M:ERay3D.projectTo(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate closest point to given Point
+</member>
+        <member name="M:ERay3D.getDistance(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate minimal distance between Point and ray
+</member>
+        <member name="M:ERay3D.getDistanceSq(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate minimal distance between Point and Plane
+</member>
+        <member name="M:ERay3D.transform(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform ray
+</member>
+        <member name="M:ERay3D.isOn(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+ray is on 
+</member>
+        <member name="M:ERay3D.isParallel(ERay3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+check for parallel rays, true if directions are collinear 
+</member>
+        <member name="M:ERay3D.op_Equality(ERay3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+ray equality operator.
+</member>
+        <member name="M:ERay3D.getOrigin">
+ray origin
+</member>
+        <member name="M:ERay3D.getDirection">
+ray direction vector.
+</member>
+        <member name="M:ERay3D.setOrigin(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set ray getOrigin
+</member>
+        <member name="M:ERay3D.setDirection(EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set ray direction vector.
+</member>
+        <member name="M:ERay3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EUnitVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+Constructor
+</member>
+        <member name="M:EUnitVector3D.normalizedScalarprod(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates scalarproduct with unit vectors
+</member>
+        <member name="M:EUnitVector3D.unit">
+normalize to unit length
+</member>
+        <member name="M:EUnitVector3D.getLength">
+get length
+</member>
+        <member name="M:EUnitVector3D.getLengthSq">
+get square of length
+</member>
+        <member name="M:EUnitVector3D.op_SubtractionAssignment(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace subtract a vector
+</member>
+        <member name="M:EUnitVector3D.op_AdditionAssignment(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace add a vector
+</member>
+        <member name="M:EUnitVector3D.op_DivisionAssignment(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+divide by a scale
+</member>
+        <member name="M:EUnitVector3D.op_MultiplicationAssignment(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+multiplicate inplace by a scalar
+</member>
+        <member name="M:EUnitVector3D.set(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set ordinates
+</member>
+        <member name="M:EUnitVector3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EUnitVector3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EUnitVector3D.#ctor(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructor
+</member>
+        <member name="M:EContour2D.addSegmentBegin(EPoint!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+Alias of addSegmentPoint
+</member>
+        <member name="M:ETransform3D.getMov">
+access to transformation vector component of the transformation
+</member>
+        <member name="M:ETransform3D.getMat">
+access to rotation matrix component of the transformation
+</member>
+        <member name="M:ETransform3D.getScale">
+calculates the scale of a 3D-transform. is the 3.root of getDeterminante
+	does not work properly, if scaling for x y and z is different 
+</member>
+        <member name="M:ETransform3D.isMirror">
+returns true, if the transformation does mirror objects
+</member>
+        <member name="M:ETransform3D.getDeterminante">
+calculates the determinant of the matrix
+</member>
+        <member name="M:ETransform3D.transpose">
+transpose Matrix (swap columns and rows)
+</member>
+        <member name="M:ETransform3D.op_UnaryNegation">
+build inverse transform 
+</member>
+        <member name="M:ETransform3D.op_Multiply(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform distance (eg. radius); does not work properly if scaling in x,y and z is different
+</member>
+        <member name="M:ETransform3D.transform(EVector3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform a vector inplace
+
+transform a vector inplace
+</member>
+        <member name="M:ETransform3D.transform(EPoint3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform a pointvector inplace
+
+transform a pointvector inplace
+</member>
+        <member name="M:ETransform3D.op_Multiply(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform a pointvector
+</member>
+        <member name="M:ETransform3D.op_Multiply(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+transform a vector
+</member>
+        <member name="M:ETransform3D.op_MultiplicationAssignment(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+in place combine two transformation by matrix multiply
+</member>
+        <member name="M:ETransform3D.op_Multiply(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+combine two transformation by matrix multiply
+</member>
+        <member name="M:ETransform3D.op_Equality(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test equality
+
+test equality
+</member>
+        <member name="M:ETransform3D.setIdentity">
+build identity transform
+</member>
+        <member name="M:ETransform3D.op_Assign(ETransform3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+move operator
+</member>
+        <member name="M:ETransform3D.op_Assign(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+assignment operator
+</member>
+        <member name="M:ETransform3D.#ctor(EMatrix3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a from values
+</member>
+        <member name="M:ETransform3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a translating ETransform3D
+</member>
+        <member name="M:ETransform3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a rotation ETransform3D, that rotates counter clock wise around the given center point and axis
+</member>
+        <member name="M:ETransform3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a ETransform3D, from two axis and an origin point
+</member>
+        <member name="M:ETransform3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a ETransform3D from two axis, calculates w = u%v
+</member>
+        <member name="M:ETransform3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a ETransform3D from three axis
+</member>
+        <member name="M:ETransform3D.#ctor(System.Double)">
+constructs a scaling ETransform3D
+</member>
+        <member name="M:ETransform3D.#ctor(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a rotation ETransform3D by three angles 
+</member>
+        <member name="M:ETransform3D.#ctor(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a rotation ETransform3D by axis and angle
+</member>
+        <member name="M:ETransform3D.#ctor(ETransform3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+the move constructor
+</member>
+        <member name="M:ETransform3D.#ctor(ETransform3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+the copy constructor
+</member>
+        <member name="M:ETransform3D.#ctor">
+constructs a unit transform
+</member>
+        <member name="M:EMatrix3D.op_MultiplicationAssignment(EMatrix3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+in place combine two transformation by matrix multiply
+</member>
+        <member name="M:EMatrix3D.#ctor(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.">
+constructs a from values
+</member>
+        <member name="M:EMatrix3D.#ctor(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a scaling matrix
+</member>
+        <member name="M:EMatrix3D.#ctor(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a rotation matrix by three angles 
+</member>
+        <member name="M:EMatrix3D.#ctor(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructs a rotation matrix by axis and angle
+</member>
+        <member name="M:EMatrix3D.#ctor(EMatrix3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+the copy constructor
+
+the move constructor
+</member>
+        <member name="M:EMatrix3D.#ctor">
+constructs a unit matrix
+</member>
+        <member name="M:EVector3D.getV">
+get as array of doubles 
+</member>
+        <member name="M:op_Multiply(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+friend operator, first operand not a W3dGeometry class 
+skalar multiplication
+
+skalar multiplication
+</member>
+        <member name="M:EVector3D.normalizedCrossprod(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates cross product with unit vectors
+</member>
+        <member name="M:EVector3D.normalizedScalarprod(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates scalarproduct with unit vectors
+</member>
+        <member name="M:EVector3D.getAngle(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate angle between vectors (0-360°), plane normal vector decides what is the right angle
+</member>
+        <member name="M:EVector3D.getAngleXY(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate angle between vectors (0-180°)
+</member>
+        <member name="M:EVector3D.getAngle(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculate angle between vectors (0-180°)
+</member>
+        <member name="M:EVector3D.isNull">
+faster test if getLength() equals 0.0
+</member>
+        <member name="M:EVector3D.isColinear(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test if two Vectors are colinear 
+</member>
+        <member name="M:EVector3D.unit">
+normalize to unit length
+</member>
+        <member name="M:EVector3D.getLength">
+get length
+</member>
+        <member name="M:EVector3D.getLengthSq">
+get square of length
+</member>
+        <member name="M:EVector3D.op_Inequality(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test unequal; to bee implemented if needed 
+</member>
+        <member name="M:EVector3D.op_Equality(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+test equal
+</member>
+        <member name="M:EVector3D.op_UnaryNegation">
+negate a vector
+</member>
+        <member name="M:EVector3D.op_Modulus(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+vector product
+</member>
+        <member name="M:EVector3D.op_Subtraction(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+subtract a vector
+</member>
+        <member name="M:EVector3D.op_Addition(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+add a vector
+</member>
+        <member name="M:EVector3D.op_Multiply(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+scalar product
+</member>
+        <member name="M:EVector3D.op_Multiply(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+multiplicate by a scalar
+</member>
+        <member name="M:EVector3D.op_SubtractionAssignment(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace subtract a vector
+</member>
+        <member name="M:EVector3D.op_AdditionAssignment(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace add a vector
+</member>
+        <member name="M:EVector3D.op_DivisionAssignment(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+divide by a scale
+</member>
+        <member name="M:EVector3D.op_MultiplicationAssignment(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+multiplicate inplace by a scalar
+</member>
+        <member name="M:EVector3D.set(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set ordinates
+</member>
+        <member name="M:EVector3D.getAt(System.UInt32)">
+get cordinate at index (0, 1 or 2)
+
+get coordinate 
+</member>
+        <member name="M:EVector3D.setZ(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set z coordinate
+
+set z coordinate
+</member>
+        <member name="M:EVector3D.getZ">
+get z coordinate
+
+get z coordinate
+</member>
+        <member name="M:EVector3D.setY(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set y coordinate
+
+set y coordinate
+</member>
+        <member name="M:EVector3D.getY">
+get y coordinate
+
+get y coordinate
+</member>
+        <member name="M:EVector3D.setX(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set x cordinate
+
+set x cordinate
+</member>
+        <member name="M:EVector3D.getX">
+get x cordinate
+
+get x cordinate
+</member>
+        <member name="M:EVector3D.init">
+clear content
+
+clear content
+</member>
+        <member name="M:EVector3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+conversion constructor: treat point as vector
+</member>
+        <member name="M:EVector3D.#ctor(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructor
+</member>
+        <member name="M:EVector3D.#ctor(EVector3D*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+move constructor
+</member>
+        <member name="M:EVector3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EVector3D.#ctor(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructor
+</member>
+        <member name="M:EVector3D.#ctor">
+default constructor
+</member>
+        <member name="M:EPoint3D.getAt(System.UInt32)">
+get coordinate 
+</member>
+        <member name="M:EPoint3D.getV">
+get Point as array of doubles 
+
+get as array of doubles 
+</member>
+        <member name="M:EPoint3D.distanceTo(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates distance 
+</member>
+        <member name="M:EPoint3D.distanceSqTo(EPoint3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+calculates square of distance (faster than calc distance)
+</member>
+        <member name="M:EPoint3D.setZ(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set z coordinate
+
+set z coordinate
+</member>
+        <member name="M:EPoint3D.z">
+get z coordinate
+
+get z coordinate
+</member>
+        <member name="M:EPoint3D.setY(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set y coordinate
+
+set y coordinate
+</member>
+        <member name="M:EPoint3D.y">
+get y coordinate
+
+get y coordinate
+</member>
+        <member name="M:EPoint3D.setX(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set x cordinate
+
+set x cordinate
+</member>
+        <member name="M:EPoint3D.x">
+get x cordinate
+
+get x cordinate
+</member>
+        <member name="M:EPoint3D.#ctor(EVector3D!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+conversion constructor
+</member>
+        <member name="M:EAngleType.op_UnaryNegation">
+invert angle
+</member>
+        <member name="M:EAngleType.op_SubtractionAssignment(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace add angles 
+</member>
+        <member name="M:EAngleType.op_Subtraction(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+add angles 
+</member>
+        <member name="M:EAngleType.op_AdditionAssignment(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+inplace add angles 
+</member>
+        <member name="M:EAngleType.op_Addition(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+add angles 
+</member>
+        <member name="M:EAngleType.value(enAngleType,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set Angle specifyed unit
+</member>
+        <member name="M:EAngleType.value(enAngleType)">
+get Angle specifyed unit
+</member>
+        <member name="M:EAngleType.trn">
+get Angle in turns; circle=1
+</member>
+        <member name="M:EAngleType.rad">
+get Angle in radian; circle=2*PI
+</member>
+        <member name="M:EAngleType.deg">
+get Angle in degrees; circle=360deg
+</member>
+        <member name="M:EAngleType.trn(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set Angle in turns; circle=1
+</member>
+        <member name="M:EAngleType.rad(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set Angle in radian; circle=2*PI
+</member>
+        <member name="M:EAngleType.deg(System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+set Angle in degrees; circle=360deg
+</member>
+        <member name="M:EAngleType.#ctor(EAngleType!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+copy constructor
+</member>
+        <member name="M:EAngleType.#ctor(enAngleType,System.Double!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+constructor
+</member>
+        <member name="M:EAngleType.#ctor">
+default constructor
+</member>
+        <member name="T:enAngleType">
+Type to define angle value range
+</member>
+        <member name="F:AT_TURNS">
+circle 1.0
+</member>
+        <member name="F:AT_RADIAN">
+circle 2*PI
+</member>
+        <member name="F:AT_DEGREE">
+circle 360°
+</member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionInteraction.IsSelectionInteraction">
+            <summary>
+Returns true, if interaction is a helper interaction to select placements.
+</summary>
+            <remarks>By default it returns <c>false</c></remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionInteraction.IsInsertInteraction">
+            <summary>
+Returns true, if interaction is used to insert one ore more placements on page.
+</summary>
+            <remarks>By default it returns <c>true</c></remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionInteraction.Finalize">
+            <summary>
+Non-deterministic Finalizer of InsertInteraction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionInteraction.Dispose">
+            <summary>
+Destructor for deterministic finalization of InsertInteraction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionInteraction.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.SelectionInteraction">
+            <summary> 
+Base class for specific interactions that selects objects.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesCollection.ReuseMessages">
+            <summary>
+Determines whether new message can be duplicated in collection. Default value is <c>false</c>.
+</summary>
+            <remarks>
+If <c>true</c> and message of same id, region and assign objects exists in collection then no new message will be added to collection.
+If <c>false</c> new message is always added to collection.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.Boolean,System.String,System.Int16)">
+            <summary>
+Adds a new message associated with part number to the project's message management window.
+</summary>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">reference to a parameterstring to substitute 
+                              placeholders in the resource error text. 
+							  Multiple parameters must be separated with "|". 
+							  In the error text parameters should be signed by "%1!s!", "%2!s!" etc.
+							  If the error text doesn't have any parameter to substitute
+							  strErrTextParam must be an empty string</param>
+            <param name="strPartNumber">The message refers to this
+                       part number. Cannot be empty or null. </param>
+            <param name="strPartVariant">The message refers to this
+                       part variant. Cannot be empty or null. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <param name="nCreationType">Additional information about the source of the message.
+                            Possible values are:
+                                0 - undefined,
+                                1 - Online verification
+                                2 - Offline verification
+                                3 - Explicit creation
+                            Note: In order to add a message with nCreationType = 3,
+                            it must be registered and enabled in the message management.</param>
+            <exception cref="T:System.ArgumentException">Thrown in case of invalid arguments.</exception>
+            <remarks>
+Method does not check if part and part variant exist. 
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.Boolean,System.String,System.Int16)">
+            <summary>
+Adds a new message associated with part number to the project's message management window.
+</summary>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">reference to a parameterstring to substitute 
+                              placeholders in the resource error text. 
+							  Multiple parameters must be separated with "|". 
+							  In the error text parameters should be signed by "%1!s!", "%2!s!" etc.
+							  If the error text doesn't have any parameter to substitute
+							  strErrTextParam must be an empty string</param>
+            <param name="strPartNumber">The message refers to this
+                       part number. Cannot be empty or null. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <param name="nCreationType">Additional information about the source of the message.
+                            Possible values are:
+                                0 - undefined,
+                                1 - Online verification
+                                2 - Offline verification
+                                3 - Explicit creation
+                            Note: In order to add a message with nCreationType = 3,
+                            it must be registered and enabled in the message management.</param>
+            <exception cref="T:System.ArgumentException">Thrown in case of invalid arguments.</exception>
+            <remarks>
+Message by default is related to variant '1' of the part.
+Method does not check if part exist. 
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+Adds a new message associated with part number to the project's message management window. Message is related to variant = 0.
+</summary>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">reference to a parameterstring to substitute 
+                              placeholders in the resource error text. 
+							  Multiple parameters must be separated with "|". 
+							  In the error text parameters should be signed by "%1!s!", "%2!s!" etc.
+							  If the error text doesn't have any parameter to substitute
+							  strErrTextParam must be an empty string</param>
+            <param name="strPartNumber">The message refers to this
+                       part number. Cannot be empty or null. </param>
+            <param name="strPartVariant">The message refers to this
+                       part variant. Cannot be empty or null. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <exception cref="T:System.ArgumentException">Thrown in case of invalid arguments.</exception>
+            <remarks>
+Method does not check if part and part variant exist. 
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+Adds a new message associated with part number to the project's message management window.
+</summary>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">reference to a parameterstring to substitute 
+                              placeholders in the resource error text. 
+							  Multiple parameters must be separated with "|". 
+							  In the error text parameters should be signed by "%1!s!", "%2!s!" etc.
+							  If the error text doesn't have any parameter to substitute
+							  strErrTextParam must be an empty string</param>
+            <param name="strPartNumber">The message refers to this
+                       part number in variant '1'. Cannot be empty or null. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <exception cref="T:System.ArgumentException">Thrown in case of invalid arguments.</exception>
+            <remarks>
+Message by default is related to variant '1' of the part.
+Method does not check if part exist. 
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,System.Boolean,Eplan.EplApi.DataModel.StorableObject,System.String,System.Int16)">
+            <summary>
+Adds a new message to the project's message management window.
+</summary>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">reference to a parameterstring to substitute 
+                              placeholders in the resource error text. 
+							  Multiple parameters must be separated with "|". 
+							  In the error text parameters should be signed by "%1!s!", "%2!s!" etc.
+							  If the error text doesn't have any parameter to substitute
+							  strErrTextParam must be an empty string</param>
+            <param name="oObject1">The message refers to this
+                       object. Optional parameter;
+                       can also be NULL. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="oObject2">A second object to which
+                       this message also refers.
+                       Optional parameter; can also
+                       be NULL. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <param name="nCreationType">Additional information about the source of the message.
+                            Possible values are:
+                                0 - undefined,
+                                1 - Online verification
+                                2 - Offline verification
+                                3 - Explicit creation
+                            Note: In order to add a message with nCreationType = 3,
+                            it must be registered and enabled in the message management.</param>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesCollection.ShowImmediately">
+            <summary>
+If true, added messages will be immediately displayed in message management window.
+Default value is false.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.Remove(Eplan.EplApi.EServices.BaseProjectMessage)">
+            <summary>
+Removes the first occurrence of a specific object from the <c>PrjMessagesCollection</c>.
+</summary>
+            <param name="msg">
+The object to remove to the <c>PrjMessagesCollection</c>.
+</param>
+            <exception cref="T:System.NotSupportedException">The <c>PrjMessagesCollection</c> is read-only.
+</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.CopyTo(Eplan.EplApi.EServices.BaseProjectMessage[],System.Int32)">
+            <summary>
+Copies the elements of the <c>PrjMessagesCollection</c> to an Array, starting at a particular Array index.
+</summary>
+            <param name="messages">
+The one-dimensional Array that is the destination of the elements copied from <c>PrjMessagesCollection</c>. The Array must have zero-based indexing.
+</param>
+            <exception cref="T:System.ArgumentNullException">
+                <c>messages</c> is a null reference (Nothing in Visual Basic).</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                <c>arrayIndex</c> is less than 0.</exception>
+            <exception cref="T:System.ArgumentException">
+                <c>messages</c> is multidimensional -or-
+<c>arrayIndex</c> is equal to or greater than the length of <c>messages</c> -or-
+The number of elements in the source <c>PrjMessagesCollection</c> is greater than the available space from <c>arrayIndex</c> to the end of the destination array.
+</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.Contains(Eplan.EplApi.EServices.BaseProjectMessage)">
+            <summary>
+Determines whether the <c>PrjMessagesCollection</c> contains a specific value.
+</summary>
+            <param name="message">
+The message to locate in the <c>PrjMessagesCollection</c>.
+</param>
+            <returns>true if item is found in the <c>PrjMessagesCollection</c>; otherwise, false. </returns>
+            <exception cref="T:System.NotSupportedException">The <c>PrjMessagesCollection</c> is read-only.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.Clear">
+            <summary>
+Removes all items from the <c>PrjMessagesCollection</c>.
+</summary>
+            <exception cref="T:System.NotSupportedException">The <c>PrjMessagesCollection</c> is read-only.</exception>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesCollection.IsReadOnly">
+            <summary>
+Gets a value indicating whether the PrjMessagesCollection is read-only.
+</summary>
+            <value>
+                <c>true</c> if the <c>PrjMessagesCollection</c> is read-only; otherwise, <c>false</c>.
+PrjMessageCollection is never read-only.
+</value>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesCollection.Count">
+            <summary>
+Gets the number of elements contained in the PrjMessagesCollection.
+</summary>
+            <value>
+ The number of elements contained in the <c>PrjMessagesCollection</c>.
+</value>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.GetPrjMsgEnumerator">
+            <summary>
+Returns a typed enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.GetEnumerator2">
+            <summary>
+Returns an enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesCollection.#ctor(Eplan.EplApi.DataModel.Project)">
+            <summary>
+constructor. initializes the matching enumerator.
+</summary>
+            <param name="oProject">messages of this project will be analyzed</param>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PrjMessagesCollection">
+            <summary>
+Collection of project messages of the last check run (See
+menu "Project data&gt;Messages&gt;Check project..."
+or <see text="VerifyProject method" cref="!:!!OVERLOADED_VerifyProject_Eplan::EplApi::HEServices::Check" />
+).
+</summary>
+            <remarks>
+Adding message to or removing messages from this collection,
+will update the messages visible in message management of
+EPLAN.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.Count">
+            <summary>
+Gets the number of elements contained in the PrjMessagesRegisteredCollection.
+</summary>
+            <value>
+ The number of elements contained in the <c>PrjMessagesRegisteredCollection</c>.
+</value>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.GetRegisteredPrjMsgsEnumerator">
+            <summary>
+Returns a typed enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.GetEnumerator">
+            <summary>
+Returns an enumerator that can iterate through a collection.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.#ctor(System.Boolean,Eplan.EplApi.DataModel.Project)">
+            <summary>
+Constructor. initializes the matching enumerator.
+</summary>
+            <param name="bOnlyLicensed">If set to true only messages that are licensed in the actual system will be regarded</param>
+            <param name="oProject">Properties of ElectroMessage will be set/get to/from this Project. Can't be null.</param>
+            <exception cref="T:System.ArgumentNullException">Null Project was passed to a parameter.</exception>
+            <exception cref="T:System.ArgumentException">Invalid Project was passed to a parameter.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.#ctor(Eplan.EplApi.DataModel.Project)">
+            <summary>
+Constructor. initializes the matching enumerator.
+</summary>
+            <param name="oProject">Properties of ElectroMessage will be set/get to/from this Project. Can't be null.</param>
+            <exception cref="T:System.ArgumentNullException">Null Project was passed to a parameter.</exception>
+            <exception cref="T:System.ArgumentException">Invalid Project was passed to a parameter.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.#ctor(System.Boolean)">
+            <summary>
+Constructor. Initializes the matching enumerator.
+</summary>
+            <param name="bOnlyLicensed">If set to true only messages that are licensed in the actual system will be regarded</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection.#ctor">
+            <summary>
+Constructor. initializes the matching enumerator.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PrjMessagesRegisteredCollection">
+            <summary>
+This is a collection of all possible message types, registered in the system,
+that can be used by PrjMessagesCollection.
+</summary>
+            <remarks>
+Project is needed when you want to use properties of ElectroMessage, otherwise no project needed.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Init(System.Boolean,Eplan.EplApi.DataModel.Project)">
+            <summary>
+initializes the enumerator for iterating over the collection of all
+registered electrotechnical messages in the system; 
+</summary>
+            <remarks> automatically used by the constructor of
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></remarks>
+            <param name="bOnlyLicensed">If set to true only messages that are licensed in the actual system will be regarded</param>
+            <param name="oProject">Properties of ElectroMessage will be set/get to/from this Project.</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Init(Eplan.EplApi.DataModel.Project)">
+            <summary>
+initializes the enumerator for iterating over the collection of all
+registered electrotechnical messages in the system; 
+</summary>
+            <remarks> automatically used by the constructor of
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></remarks>
+            <param name="oProject">Properties of ElectroMessage will be set/get to/from this Project.</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Init(System.Boolean)">
+            <summary>
+initializes the enumerator for iterating over the collection of all
+registered electrotechnical messages in the system; 
+</summary>
+            <remarks> automatically used by the constructor of
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></remarks>
+            <param name="bOnlyLicensed">
+If set to true only messages that are licensed in the actual system will be regarded
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Init">
+            <summary>
+initializes the enumerator for iterating over the collection of all
+registered electrotechnical messages in the system; only
+messages that are licensed in the actual system will be regarded
+</summary>
+            <remarks> automatically used by the constructor of
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Reset">
+            <summary>
+Sets the enumerator to its initial position, 
+which is before the first element in 
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.MoveNext">
+            <summary>
+Advances the enumerator to the next element of 
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></summary>
+            <returns>true if the enumerator was successfully advanced to the next element; 
+false if the enumerator has passed the end of the collection</returns>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.Current">
+            <summary>
+gets the current element in 
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></summary>
+            <returns>the current element</returns>
+            <remarks>must be called to advance the enumerator 
+to the first element of the collection before reading the current value</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator.#ctor">
+            <summary>
+Default constructor
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PrjMessagesRegisteredEnumerator">
+            <summary>
+iterates over all registered electrotechnical messages of the system
+<see text="Eplan.EplApi.EServices.PrjMessagesRegisteredCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesRegisteredCollection" /></summary>
+            <remarks>
+only electrotechnical messages that are licensed in the actual system
+will be returned
+</remarks>
+            <example> getting all registered electrotechnical messages in the system
+<code lang="C#">
+PrjMessagesRegisteredCollection colPrjRegMsg = new PrjMessagesRegisteredCollection();
+PrjMessagesRegisteredEnumerator itPrjRegMsg = colPrjRegMsg.GetRegisteredPrjMsgsEnumerator();
+
+itPrjRegMsg.MoveNext();
+int nNr=0;
+
+do 
+{
+	ElectroMessage oEMsg = itPrjRegMsg.Current as ElectroMessage;
+	if (oEMsg != null)
+	{
+		nNr++;
+	}					
+
+} while(itPrjRegMsg.MoveNext());
+</code></example>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesEnumerator.SetProject(Eplan.EplApi.DataModel.Project)">
+            <summary>
+initializes the enumerator for iterating over the project messages collection
+</summary>
+            <param name="oProject">messages of this project will be analyzed</param>
+            <remarks> automatically used by the constructor of
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesEnumerator.Reset">
+            <summary>
+Sets the enumerator to its initial position, 
+which is before the first element in 
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesEnumerator.MoveNext">
+            <summary>
+Advances the enumerator to the next element of 
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></summary>
+            <returns>true if the enumerator was successfully advanced to the next element; 
+false if the enumerator has passed the end of the collection</returns>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesEnumerator.Current">
+            <summary>
+gets the current element in 
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></summary>
+            <returns>the current element</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the enumerator is positioned before the first element of the collection or after the last element.</exception>
+            <remarks>must be called to advance the enumerator 
+to the first element of the collection before reading the current value</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PrjMessagesEnumerator.CurrentProjectMessage">
+            <summary>
+gets the current element in 
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></summary>
+            <returns>the current element</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the enumerator is positioned before the first element of the collection or after the last element.</exception>
+            <remarks>must be called to advance the enumerator 
+to the first element of the collection before reading the current value</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesEnumerator.Finalize">
+            <summary>
+Non-deterministic Finalizer of PrjMessagesEnumerator object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PrjMessagesEnumerator.#ctor">
+            <summary>
+Default constructor
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PrjMessagesEnumerator">
+            <summary>
+supports a simple iteration over 
+<see text="Eplan.EplApi.EServices.PrjMessagesCollection" cref="!:Eplan::EplApi::EServices::PrjMessagesCollection" /></summary>
+            <example> getting all project messages after an offline run
+<code lang="C#">
+Check oCheck = new Check();
+oCheck.VerifyProject(oProject);
+
+PrjMessagesCollection colPrjMsg = new PrjMessagesCollection(oProject);
+PrjMessagesEnumerator itPrjMsg = colPrjMsg.GetPrjMsgEnumerator();
+
+itPrjMsg.MoveNext();
+int nNr=0;
+
+do 
+{
+	ProjectMessage oPrjMsg = itPrjMsg.Current as ProjectMessage;
+	if (oPrjMsg != null)
+	{
+		nNr++;
+	}					
+
+} while(itPrjMsg.MoveNext());
+</code></example>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.ElectroMessage.FilterScheme">
+            <summary>
+Gets/sets filter scheme on a template of project message.
+</summary>
+            <param name="sFilterSchemeName">Filter scheme name. Must not be empty or null. Default filter scheme names:
+All_trades, Trade_Electrical_engineering, Trade_Fluid_power, Trade_Mechanics, Trade_Process_engineering
+</param>
+            <remarks>
+Using this property requires ElectroMessage to be created in the context of a Project. 
+In order to do this PrjMessagesRegisteredCollection have to be created with oProject parameter. 
+Property returns empty string when ElectroMessage was not created in the context of a Project or 
+template of project message is visible with "No filter" filter in GUI.
+</remarks>
+            <exception cref="!:BaseException">Thrown by setter when ElectroMessage wasn't created in the context of a project, project is invalid or 
+template of project message is visible with "No filter" filter in GUI.</exception>
+            <exception cref="!:InvalidArgumentException">Thrown by setter when parameter sFilterSchemeName is empty or null.</exception>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.ElectroMessage.IsLicensed">
+            <summary>
+Returns true if the message is licensed. 
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.GetTextTemplate">
+            <summary>
+Returns the text template of the message. 
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.GetCategory">
+            <summary>
+Returns the error level of the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.GetId">
+            <summary>
+Returns the Id of the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.GetGroup">
+            <summary>
+Returns the region associated with the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.Finalize">
+            <summary>
+Non-deterministic Finalizer of ElectroMessage object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.Dispose">
+            <summary>
+destructor
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.#ctor(EsMessage*,Eplan.EplApi.DataModel.Project)">
+            <summary>
+constructor
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ElectroMessage.#ctor(EsMessage*)">
+            <summary>
+constructor
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.ElectroMessage">
+            <summary>
+base class for a template of a project message
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.ClearProjectMessage(Eplan.EplApi.EServices.ProjectMessage)">
+            <summary>
+Deletes message given as parameter.
+This method has been deprecated. Please use class PrjMessagesCollection.
+</summary>
+            <param name="oProjectMessage">The message to delete from project. </param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oProjectMessage</c>
+                                              is invalid or
+                                              NULL.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.ClearAllProjectMessages(Eplan.EplApi.DataModel.Project)">
+            <summary>
+Deletes all messages belonging to the given project.
+This method has been deprecated. Please use class PrjMessagesCollection.
+</summary>
+            <param name="oProject">The messages are deleted from this
+                       project. </param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oProject</c>
+                                              is invalid or
+                                              NULL.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.AddMessage(Eplan.EplApi.DataModel.Project,Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,System.Boolean,Eplan.EplApi.DataModel.StorableObject,System.String)">
+            <summary>
+Adds a new message to the database with electrotechnical
+messages (Project data\&gt;Messages\&gt;Management).
+Any existing message from the system can be added as well as
+messages registered by an add-in.
+This method has been deprecated. Please use class PrjMessagesCollection.
+</summary>
+            <param name="oProject">The message is added to this
+                       project. </param>
+            <param name="eRegion">A message of this <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                      is added. </param>
+            <param name="nErrNr">A message with this message
+                     number is added. </param>
+            <param name="strErrTextParam">The replacement text for
+                              this message is appended.
+                              Optional parameter; this
+                              string may also be empty. </param>
+            <param name="oObject1">The message refers to this
+                       object. Optional parameter;
+                       can also be NULL. </param>
+            <param name="bImmediateShow">True\: The message is
+                             immediately displayed in the
+                             message window. </param>
+            <param name="oObject2">A second object to which
+                       this message also refers.
+                       Optional parameter; can also
+                       be NULL. </param>
+            <param name="strAdditionalInfo">Additional
+                                language\-independent
+                                message text. Is saved as
+                                specified in the database.
+                                Optional parameter; this
+                                string may also be empty. </param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oProject</c>
+                                              is invalid or
+                                              NULL. Thrown
+                                              when <c>eRegion</c>
+                                              is
+                                              ePRJMSG_REGION_UNKNOWN.</exception>
+            <remarks>
+In order to add an error message to the system messages list,
+please refer to the method <see text="BaseException::FixMessage" cref="M:Eplan.EplApi.Base.BaseException.FixMessage" />.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.Finalize">
+            <summary>
+Non-deterministic Finalizer of MessageManager object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.Dispose">
+            <summary>
+Releases the object. 
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.MessageManager.#ctor">
+            <summary>
+Creates a new object. 
+This method has been deprecated. Please use class PrjMessagesCollection.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.MessageManager">
+            <summary>
+Class for accessing the management of electrotechnical
+messages . Each EPLAN project includes a database in which
+messages or errors on electrotechnical issues are saved (See
+Project data\&gt;Messages\&gt;Management).
+This method has been deprecated. Please use class PrjMessagesCollection.
+</summary>
+            <remarks>
+For system messages, please refer to the classes <see text="BaseException" cref="T:Eplan.EplApi.Base.BaseException" />
+and <see text="SysMessagesCollection" cref="T:Eplan.EplApi.Base.SysMessagesCollection" />.
+
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.ProjectMessage.CreationType">
+            <summary>
+Shows the method by which the message was created.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.#ctor(ProjectMessageHandle!System.Runtime.CompilerServices.IsConst*!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary>
+constructor
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetErrorTextParameter">
+            <summary>
+The replacement text for this message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.SetDone(System.Boolean)">
+            <summary>
+Marks message as solved or not.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetDone">
+            <summary>
+checks if message has been marked as solved
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetAdditionalInfo">
+            <summary>
+Returns an additional text if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetUser">
+            <summary>
+Returns the computer name of the user, who has been created the message
+</summary>
+            <remarks>
+Some messages do not have this property set. In this case empty string is returned.
+Please set USER.EsDMServices.EsMsgMgmtService.WriteUserAndTimeToAllMessages in order to write User and Time data to every message when it is created.
+This settings can be initialized only before first check run. Please restart EPLAN in order to initialize settings again.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetEplanVersion">
+            <summary>
+Returns the creation version of the message
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetTime">
+            <summary>
+Returns the creation time of the message
+</summary>
+            <remarks>
+Some messages do not have this property set. In this case DateTime.MinValue object is returned.
+Please set USER.EsDMServices.EsMsgMgmtService.WriteUserAndTimeToAllMessages in order to write User and Time data to every message when it is created.
+This settings can be initialized only before first check run. Please restart EPLAN in order to initialize settings again.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetPartVariant">
+            <summary>
+Returns the part variant associated to the message if any.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetPartNumber">
+            <summary>
+Returns the part number associated to the message if any.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetObject2">
+            <summary>
+Returns the second object associated to the message if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetObject1">
+            <summary>
+Returns the first object associated to the message if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetText">
+            <summary>
+Returns the the complete text of the message. 
+Parameters has been substituted.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetCategory">
+            <summary>
+Returns the error level of the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetId">
+            <summary>
+Returns the Id of the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.GetGroup">
+            <summary>
+Returns the region associated with the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.Finalize">
+            <summary>
+Non-deterministic Finalizer of ProjectMessage object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessage.Dispose">
+            <summary>
+destructor
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.ProjectMessage">
+            <summary>
+Base class for project messages.
+</summary>
+            <remarks>
+To get <see text="Page" cref="T:Eplan.EplApi.DataModel.Page" /> or <see text="InstallationSpace" cref="T:Eplan.EplApi.DataModel.E3D.InstallationSpace" />
+associated with this message, it is necessary to get first associated object and 
+gain needed information from it.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.Equals(System.Object)">
+            <summary>
+Determines whether the specified <c>BaseProjectMessage</c> is equal to the current <c>BaseProjectMessage</c>.
+</summary>
+            <param name="obj">
+The <see text="BaseProjectMessage" cref="T:Eplan.EplApi.EServices.BaseProjectMessage" /> to compare with the current <c>BaseProjectMessage</c>.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String)">
+            <summary>
+constructor
+</summary>
+            <param name="eRegion">
+                <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" /> of this message.
+</param>
+            <param name="nErrNr">
+Message number.
+</param>
+            <param name="strErrTextParam">
+The replacement text for this message.
+This string may also be empty.
+</param>
+            <param name="strPartNumber">
+The message refers to variant '1' of this part number. 
+Cannot be empty or null.
+</param>
+            <param name="strAdditionalInf">
+Additional language-independent message text. Is saved as specified in the 
+database.
+This string may also be empty.
+</param>
+            <exception cref="T:System.ArgumentException">Thrown when strPartNumber is empty or null.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,Eplan.EplApi.DataModel.StorableObject,System.String)">
+            <summary>
+constructor
+</summary>
+            <param name="eRegion">
+                <see text="Eplan.EplApi.EServices.IMessage.REGION" cref="T:Eplan.EplApi.EServices.IMessage.Region" /> of this message.
+</param>
+            <param name="nErrNr">
+Message number.
+</param>
+            <param name="strErrTextParam">
+The replacement text for this message.
+This string may also be empty.
+</param>
+            <param name="oObject1">
+The message refers to this object. 
+Can also be NULL.
+</param>
+            <param name="oObject2">
+A second object to which this message also refers.
+Can also be NULL.
+</param>
+            <param name="strAdditionalInf">
+Additional language-independent message text. Is saved as specified in the 
+database.
+This string may also be empty.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetErrorTextParameter">
+            <summary>
+The replacement text for this message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetAdditionalInfo">
+            <summary>
+Returns an additional text if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetPartVariant">
+            <summary>
+Returns the part variant associated to the message if any.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetPartNumber">
+            <summary>
+Returns the part number associated to the message if any.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetObject2">
+            <summary>
+Returns the second object associated to the message if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetObject1">
+            <summary>
+Returns the first object associated to the message if any
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetId">
+            <summary>
+Returns the Id of the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.GetGroup">
+            <summary>
+Returns the region associated with the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.Finalize">
+            <summary>
+Non-deterministic Finalizer of BaseProjectMessage object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.BaseProjectMessage.Dispose">
+            <summary>
+destructor
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.BaseProjectMessage">
+            <summary>
+Base class for project messages. It is not stored in database.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessagesListWrapper.Dispose">
+            <summary>
+Destructor for deterministic finalization of ProjectMessagesListWrapper object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.ProjectMessagesListWrapper.#ctor(System.UInt16)">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.ProjectMessagesListWrapper">
+            <summary> 
+TODO
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PartVerification.FilterConfigPath">
+            <summery>
+Returns the settings path to this setting where the possible range of the filter is defined.
+</summery>
+            <remarks>
+This property does not defined the user choice of the filter.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PartVerification.OnRegister(System.String@,Eplan.EplApi.EServices.IMessage.Region@,System.Int32@,Eplan.EplApi.EServices.IMessage.Classification@,System.Int32@)">
+            <summary>
+Called by EPLAN when the new project message is added to the
+system. If a new project message was added to a registered
+add-in, the add-in must be registered over again.
+</summary>
+            <param name="eRegion">The new project message will
+                      be added to this <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />.
+                      Part verifications can be registered only in PartMasterData region.
+                      </param>
+            <param name="iMessageId">serial number inside the
+                         chosen region </param>
+            <param name="eClassification">Default <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              of the new message. The <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              could be changed in the
+                              project setting dialog at run
+                              time. </param>
+            <param name="iOrdinal">The new message could
+                       overwrite an existing message
+                       which has the same <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                       and the same iMessageId, if
+                       the ordinal number of the new
+                       message is higher. (default\:
+                       20)</param>
+            <remarks>
+PartVerifications can be registered only in PartMasterData region.
+By overriding an existing message, it is only possible to
+change the message text, but not the classification etc.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PartVerification.VerificationState">
+            <summary>
+The VerificationState determines the actual adjusted check
+type whereas the permission determines what state is
+theoretically allowed at most.
+</summary>
+            <remarks>
+The state must comply to the permission: only weaker states
+can be set dynamically. The state is normally set from scheme
+settings (by the scheme dialog, for instance). supported
+state values for part verifications are:
+
+0=NoExecutionState: The verification will be not executed in
+the next offline check run (certainly not in online mode).
+
+1=OfflineOnlyState: The verification will be executed in an
+offline check run but not online.
+
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PartVerification.MessageId">
+            <summary>
+The ID of the message.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.PartVerification.Region">
+            <summary>
+The region associated with the message.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(System.String,System.String,System.String)">
+            <summary>
+Service function for the error output during a test.
+Text to display is taken from correct IMessage::GetMessageText method.
+</summary>
+            <param name="strPartNumber">
+The error refers to part with this part number. Cannot be empty or null. 
+</param>
+            <param name="strPartVariant">
+The error refers to part in this part variant. Cannot be empty or null. 
+</param>
+            <param name="strTextParameter">
+Parameter values for the message text. This value is used only with messages that use %1!s! variable in their definition.
+</param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>strPartNumber</c> or <c>strPartVariant</c>
+                                              is empty or
+                                              NULL.</exception>
+            <remarks>
+Method does not check if part and part variant exist. 
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.PartVerification">
+            <summary>
+Base class for specific test classes.
+</summary>
+            <seealso cref="!:Verifications" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IPartVerification.Execute(Eplan.EplApi.MasterData.MDPartsDatabaseItem)">
+            <summary>
+Called by EPLAN when a specific MDPartsDatabaseItem is to be checked. Currently only MDPart objects are passed to this method.
+Implements the "check." 
+</summary>
+            <param name="oMDPartItem">
+This MDPartsDatabaseItem will be checked.
+</param>
+            <example>
+The following example shows a method to check if part has empty ERP number. The error message will be added into message dialog.
+<code lang="C#">
+public override void Execute(Eplan.EplApi.MasterData.MDPartsDatabaseItem oMDPartItem)
+{
+	MDPart oPart = oMDPartItem as MDPart;
+	if (oPart != null)
+	{
+		if (oPart.Properties.ARTICLE_ERPNR.IsEmpty)
+		{
+			DoErrorMessage(oPart.PartNr);
+		}                
+	}
+}
+</code></example>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IPartVerification">
+            <summary>
+Interface declaration for a part check in EPLAN.
+If an add-in wants to add an undefined part check to EPLAN projects 
+this interface must be implemented by a class of the add-in.
+</summary>
+            <seealso cref="!:Verifications" />
+        </member>
+        <member name="P:Eplan.EplApi.EServices.InterruptionPointVerification.FilterConfigPath">
+            <summery>
+Returns the settings path to this setting where the possible range of the filter is defined.
+</summery>
+            <remarks>
+This property does not defined the user choice of the filter.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.InterruptionPointVerification.AdditionalObjectsFilter">
+            <summary>
+Type of class which filters objects that are additionally passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>
+Set of types that can be passed to be verified, is created from type returned by this property and all type that inherit from it.
+</para>
+                <para>
+Depending on the value of the filter, framework can also pass additional object to be checked. They are objects of classes:
+Connections, DeviceListEntry, ArticleReference and PlanningSegment.
+</para>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>
+While check of whole project is done all pages and installation spaces are always passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method,
+regardless value of this property.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.InterruptionPointVerification.ObjectsFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.InterruptionPointVerification.ObjectsTypeFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.InterruptionPointVerification.GetUsedConnectingPoints(Eplan.EplApi.DataModel.InterruptionPoint,System.Collections.ArrayList@)">
+            <summary>
+Gets all used connection points from the project.
+Can be called within the execute function.
+</summary>
+            <remarks>
+This function uses an internal buffer mechanism.
+</remarks>
+            <param name="oInterruptionPoint">
+Interruption point, for which all other connection points should be found.
+</param>
+            <param name="colUsedConnectingPoints">
+The result list with all used connection points.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.InterruptionPointVerification.GetCrossReferencedInterruptionPoints(Eplan.EplApi.DataModel.InterruptionPoint,System.Collections.ArrayList@)">
+            <summary>
+Gets all cross reference interruption points with the same name from the project.
+Can be called within the execute function.
+</summary>
+            <remarks>
+This function uses an internal buffer mechanism. You can use this to get all interruption points in a star layout. In pair layout, you get only the one paired interruption point.
+</remarks>
+            <param name="oInterruptionPoint">
+Interruption point with name, for which all other cross reference interruption points should be found.
+</param>
+            <param name="colInterruptionPoints">
+The result list with all cross reference interruption points.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.InterruptionPointVerification.GetAllInterruptionPointsWithSameName(Eplan.EplApi.DataModel.InterruptionPoint,System.Collections.ArrayList@)">
+            <summary>
+Gets all interruption points with the same name from the project.
+Can be called within the execute function.
+</summary>
+            <remarks>
+This function uses an internal buffer mechanism. You can use this, to get all pairs of interruption points (in pair layout) on one potential.
+</remarks>
+            <param name="oInterruptionPoint">
+Interruption point with name, for which all other interruption points should be found.
+</param>
+            <param name="colInterruptionPoints">
+List with all interruption points with the same name.
+</param>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.InterruptionPointVerification">
+            <summary>
+Basis class for special test classes, which examine only
+interruption points.
+</summary>
+            <remarks>
+When using following inheritance hierarchy :
+
+Interface, inheriting abstract class, and then normal class,
+(like IMessage-\&gt;PotentialVerification -\&gt;VerificationExample)
+under .Net 2.0 there is a run-time error while loading add-in
+("Unable to load one or more of the requested types. Retrieve
+the LoaderExceptions property for more information")
+
+
+
+Current workaround is to add interface names after class
+identifier, so such declaration as:
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification
+{}
+</code>
+
+Should be substituted by :
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification : IVerification : IMessage
+{}
+</code></remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IInterruptionPointVerification">
+            <summary>
+Interface for a special test class.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProject.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.IsStorePossible">
+            <summary>
+Returns <c>true</c> if project exported from this subproject can be inserted back to project.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.IsFileOffPossible">
+            <summary>
+Returns <c>true</c> if subproject represened by this object can be exported.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.Project">
+            <summary>
+Project for which  the subproject is defined.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.Number">
+            <summary>
+Subproject number.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.SchemeName">
+            <summary>
+Name of the associated defined working section for the this subproject.
+</summary>
+            <remarks>
+This name can be used for reading, importing or exporting scheme for/to project settings.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.Status">
+            <summary>
+Status of this subproject.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.Description">
+            <summary>
+Description of the associated defined working section for the this subproject.
+</summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if project of this subproject becames invalid and it is not possible to continue.</exception>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.SubProject.Name">
+            <summary>
+Displayed scheme name of the associated defined working section for the this subproject.
+</summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if project of this subproject becames invalid and it is not possible to continue.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProject.Finalize">
+            <summary>
+Non-deterministic Finalizer of SubProject object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.SubProject.Dispose">
+            <summary>
+Destructor for deterministic finalization of SubProject object.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.SubProject.SubProjectStatus">
+            <summary>
+Possible statuses of subproject.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.SubProject">
+            <summary> 
+Represents subproject specified by the defined working sections.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.FunctionVerification.FilterConfigPath">
+            <summery>
+Returns the settings path to this setting where the possible range of the filter is defined.
+</summery>
+            <remarks>
+This property does not defined the user choice of the filter.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.FunctionVerification.AdditionalObjectsFilter">
+            <summary>
+Type of class which filters objects that are additionally passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>
+Set of types that can be passed to be verified, is created from type returned by this property and all type that inherit from it.
+</para>
+                <para>
+Depending on the value of the filter, framework can also pass additional object to be checked. They are objects of classes:
+Connections, DeviceListEntry, ArticleReference and PlanningSegment.
+</para>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>
+While check of whole project is done all pages and installation spaces are always passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method,
+regardless value of this property.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.FunctionVerification.ObjectsFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.FunctionVerification.ObjectsTypeFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.FunctionVerification.GetAllFunctionsWithSameName(Eplan.EplApi.DataModel.Function,System.Collections.ArrayList@)">
+            <summary>
+Returns all functions of the project with the same name.
+Can be called within the Execute function. 
+</summary>
+            <remarks>
+This function uses an internal buffer mechanism and is therefore very quick when 
+called several times in a check routine.
+</remarks>
+            <param name="oFunction">
+The function based on which other functions with the same name are to be searched.
+</param>
+            <param name="colFunctions">
+The list of results giving all functions with the same name.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.FunctionVerification.Finalize">
+            <summary>
+Non-deterministic Finalizer of ClassName object.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.FunctionVerification">
+            <summary>
+Base class for specific verification classes that only check
+functions.
+</summary>
+            <remarks>
+When using following inheritance hierarchy :
+
+Interface, inheriting abstract class, and then normal class,
+(like IMessage-\&gt;PotentialVerification -\&gt;VerificationExample)
+under .Net 2.0 there is a run-time error while loading add-in
+("Unable to load one or more of the requested types. Retrieve
+the LoaderExceptions property for more information")
+
+
+
+Current workaround is to add interface names after class
+identifier, so such declaration as:
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification
+{}
+</code>
+
+Should be substituted by :
+
+<code><b>public</b><b>class</b> VerificationExample: PotentialVerification : IVerification : IMessage
+{}
+</code></remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IFunctionVerification.AddCategoryFilter(Eplan.EplApi.DataModel.Function.Enums.Category@)">
+            <summary>
+This type of check is only performed for a certain function category.
+</summary>
+            <param name="eCategory">
+Function category for which this check is to be made.
+</param>
+            <remarks>
+Method AddCategoryFilter is called only when registering the Addin (it is not executed every project checking).
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IFunctionVerification">
+            <summary>
+Interface for a special verification class.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.FilterConfigPath">
+            <summery>
+Returns the settings path to this setting where the possible range of the filter is defined.
+</summery>
+            <remarks>
+This property does not defined the user choice of the filter.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.AdditionalObjectsFilter">
+            <summary>
+Type of class which filters objects that are additionally passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>
+Set of types that can be passed to be verified, is created from type returned by this property and all type that inherit from it.
+</para>
+                <para>
+Depending on the value of the filter, framework can also pass additional object to be checked. They are objects of classes:
+Connections, DeviceListEntry, ArticleReference and PlanningSegment.
+</para>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>
+While check of whole project is done all pages and installation spaces are always passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method,
+regardless value of this property.
+</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.ObjectsFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.ObjectsTypeFilter">
+            <summary>
+Collection of objects types which will be used to determine objects passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method.
+</summary>
+            <remarks>
+                <para>This property is used only when check is done for hole project.</para>
+                <para>This property is only a tip for framework. Set of objects 
+passed to <see text="Execute" cref="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)" /> method is a sum of types passed by all verifications
+executed in current check.</para>
+                <para>Objects of all types inherit from types passed by this property are also checked by verification.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.RemoveOldMessages">
+            <summary>
+If true, all messages with the same region and message id are removed after OnStartInspection is called.
+</summary>
+            <remarks>
+                <p>Setting this property gives the effect only if it is done in method OnStartInspection.</p>
+                <p>By default this value is <c>false</c></p>.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.VerificationPermission">
+            <summary>
+The permission of a verification determines for what type of
+check the verification is enabled at most/ maximum.
+</summary>
+            <remarks>
+The permission should only initialized one-time (typically in
+the constructor in your verification class; default value is
+OnlineOfflinePermitted) and should not change during runtime.
+Supported permission values are:
+
+0=NoExecutionPermitted: Verifications with
+"NoExecutionPermitted" are no 'real' verifications
+These so called "dummy verifications" are only used
+to delete simple project messages before an offline check run
+starts.
+
+1=OfflineOnlyPermitted: Verification with this permission
+will only be executed in an offline check run. This
+verification is not allowed to be executed in online- state.
+Use this permission if your verification is very complex.
+
+2=OnlineOfflinePermitted: If you choose this permission the
+verification will be executed in online- as well as in
+offline- mode. To avoid performance problems the verification
+should be fast. OnlineOfflinePermitted is the default.
+
+3=RestrictivePermitted: Verifications with this permission
+will be executed in online- as well as in offline-mode(so the
+verification should be fast). In the online state a dialog
+will be shown and the change, that generated the project
+message will be canceled. In the offline state the
+verification will be executed but without the undo. 
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.VerificationState">
+            <summary>
+The VerificationState determines the actual adjusted check
+type whereas the permission determines what state is
+theoretically allowed at most.
+</summary>
+            <remarks>
+The state must comply to the permission: only weaker states
+can be set dynamically. The state is normally set from scheme
+settings (by the scheme dialog, for instance). supported
+state values are:
+
+0=NoExecutionState: The verification will be not executed in
+the next offline check run (certainly not in online mode).
+
+1=OfflineOnlyState: The verification will be executed in an
+offline check run but not online.
+
+2=OnlineOfflineState: The verification will be executed in an
+offline check run as well as online. "Online"
+means, that every time an undo step opens (an object is
+changed, a new object is inserted or an object is deleted),
+the verification will be executed. OnlineOfflineState is the
+default.
+
+3=RestrictiveState: The verification will be executed in an
+offline check run as well as online. Additionally in online
+mode and if the verification announces an error, the last
+change will be canceled. This state can only be set if the
+permission of the verification was initialized with
+RestrictivePermitted. 
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.MessageId">
+            <summary>
+The ID of the message. Is automatically set. 
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Verification.Region">
+            <summary>
+The region associated with the message. Is automatically set. 
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Verification.DoErrorMessage(Eplan.EplApi.DataModel.StorableObject,Eplan.EplApi.DataModel.StorableObject,System.String)">
+            <summary>
+Service function for the error output during a test.
+Text to display is taken from correct IMessage::GetMessageText method.
+</summary>
+            <param name="oFirstObject">
+The error refers to this object. 
+</param>
+            <param name="oSecondObject">
+Another object that caused the error. 
+</param>
+            <param name="strTextParameter">
+Parameter values for the message text. This value is used only with messages that use %1!s! variable in their definition.
+</param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oFirstObject</c>
+                                              is invalid or
+                                              NULL.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Verification.DoErrorMessage(Eplan.EplApi.DataModel.StorableObject,System.String)">
+            <summary>
+Service function for the error output during a test.
+Text to display is taken from correct IMessage::GetMessageText method.
+</summary>
+            <param name="oObject">
+The error refers to this object. 
+</param>
+            <param name="strTextParameter">
+Parameter values for the message text. This value is used only with messages that use %1!s! variable in their definition.
+</param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oObject</c>
+                                              is invalid or
+                                              NULL.</exception>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Verification.DoErrorMessage(Eplan.EplApi.DataModel.StorableObject)">
+            <summary>
+Service function for the error output during a test.
+Text to display is taken from correct IMessage::GetMessageText method.
+</summary>
+            <param name="oObject">
+The error refers to this object. 
+</param>
+            <exception cref="T:System.ArgumentException">Thrown when <c>oObject</c>
+                                              is invalid or
+                                              NULL.</exception>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Verification">
+            <summary>
+Base class for specific test classes.
+</summary>
+            <seealso cref="!:Verifications" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IVerification.Execute(Eplan.EplApi.DataModel.StorableObject)">
+            <summary>
+Called by EPLAN when a specific object is to be checked.
+Implements the "check." 
+</summary>
+            <param name="oObject1">
+This object is to be checked. 
+</param>
+            <example>
+The following example shows a method to prevent creating rectangle on page with plant "ETH".
+This is an example of verification with type - prevent. The error message will not be added into message dialog
+but message box will be displayed and creation of rectangle will be automatically canceled.
+<code lang="C#">
+public override void Execute(Eplan.EplApi.MasterData.MDPartsDatabaseItem oItem)
+{
+    if (this.VerificationState == IVerification.VerificationState.RestrictiveState)
+    {
+        Rectangle oRectangle = oObject as Rectangle;
+        if (oRectangle != null)
+        {
+            if (oRectangle.Page != null)
+            {
+                if (oRectangle.Page.Properties.DESIGNATION_FULLPLANT == "ETH")
+                {
+                    DoErrorMessage(oRectangle, oRectangle.Page.Name);
+                }
+            }
+        }
+    }
+}
+</code></example>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IVerification">
+            <summary>
+Interface declaration for an electrotechnical check in EPLAN.
+If an add-in wants to add an undefined check to EPLAN projects 
+this interface must be implemented by a class of the add-in.
+</summary>
+            <seealso cref="!:Verifications" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IVerificationBase.OnEndInspection">
+            <summary>
+Called by EPLAN when a check routine has been completed. 
+</summary>
+            <remarks>
+Note: OnStartInspection/OnEndInspection methods are called for each verification registered in the system
+when the check routine starts/ends regardless of type of the check (online/offline) 
+and regardless of the verification's category filter.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IVerificationBase.OnStartInspection(System.Boolean)">
+            <summary>
+Called by EPLAN when a check routine starts in the system. 
+</summary>
+            <param name="bOnline">
+True: An online check is made.
+False: An offline check is made.
+</param>
+            <remarks>
+Note: OnStartInspection/OnEndInspection methods are called for each verification registered in the system
+when the check routine starts/ends regardless of type of the check (online/offline) 
+and regardless of the verification's category filter.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IVerificationBase.OnRegister(System.String@,System.Int32@)">
+            <summary>
+Called by EPLAN when the new check is added to the system.
+</summary>
+            <remarks>
+It is not allowed to override the functionality of an
+existing check. Only the message text can be changed as
+described in <see text="Eplan.EplApi.EServices.IMessage.OnRegister" cref="M:Eplan.EplApi.EServices.IMessage.OnRegister(System.String@,Eplan.EplApi.EServices.IMessage.Region@,System.Int32@,Eplan.EplApi.EServices.IMessage.Classification@,System.Int32@)" /></remarks>
+            <param name="strName">The new check is saved with this name
+                      in the system. </param>
+            <param name="iOrdinal">Overload level for the new check. </param>
+            <remarks>
+It is not possible to overwrite an existing verification. The
+overload level is just needed for registration purposes.
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IVerificationBase.VerificationState">
+            <summary>
+The VerificationState determines the actual adjusted check
+type whereas the permission determines what state is
+theoretically allowed at most.
+</summary>
+            <remarks>
+The state must comply to the permission: only weaker states
+can be set dynamically. The state is normally set from scheme
+settings (by the scheme dialog, for instance). Supported
+state values are:
+
+0=NoExecutionState: The verification will be not executed in
+the next offline check run (certainly not in online mode).
+
+1=OfflineOnlyState: The verification will be executed in an
+offline check run but not online.
+
+2=OnlineOfflineState: The verification will be executed in an
+offline check run as well as online. "Online"
+means, that every time an undo step opens (an object is
+changed, a new object is inserted or an object is deleted),
+the verification will be executed. OnlineOfflineState is the
+default.
+
+3=RestrictiveState: The verification will be executed in an
+offline check run as well as online. Additionally in online
+mode and if the verification announces an error, the last
+change will be canceled. This state can only be set if the
+permission of the verification was initialized with
+RestrictivePermitted. 
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IVerificationBase.Permission">
+            <summary>
+The permission of a verification determines for what type of
+check the verification is enabled at most/ maximum.
+</summary>
+            <remarks>
+The permission should only initialized one-time (typically in
+the constructor in your verification class; default value is
+OnlineOfflinePermitted) and should not change during runtime.
+Supported permission values are:
+
+0=NoExecutionPermitted: Verifications with
+"NoExecutionPermitted" are no 'real' verifications
+These so called "dummy verifications" are only used
+to delete simple project messages before an offline check run
+starts.
+
+1=OfflineOnlyPermitted: Verification with this permission
+will only be executed in an offline check run. This
+verification is not allowed to be executed in online- state.
+Use this permission if your verification is very complex.
+
+2=OnlineOfflinePermitted: If you choose this permission the
+verification will be executed in online- as well as in
+offline- mode. To avoid performance problems the verification
+should be fast. OnlineOfflinePermitted is the default.
+
+3=RestrictivePermitted: Verifications with this permission
+will be executed in online- as well as in offline-mode(so the
+verification should be fast). In the online state a dialog
+will be shown and the change, that generated the project
+message will be canceled. In the offline state the
+verification will be executed but without the undo. 
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IVerificationBase">
+            <summary>
+Base interface declaration for a check in EPLAN.
+If an add-in wants to add an undefined check to EPLAN projects 
+please implement interface IVerification or IPartVerification.
+</summary>
+            <seealso cref="!:Verifications" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.SetSelection(Eplan.EplApi.DataModel.StorableObject[])">
+            <summary>
+can be called to change selection. should only be used inside the OnSelect() method
+</summary>
+            <param name="arrSelectedObjects">
+Array containing the selected placements.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Success</c>.</returns>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.MousePosition">
+            <summary>
+current mouse position
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.StartPosition">
+            <summary>
+start position of Interaction.
+The StartPosition is needed to calculate the current position while ortho mode is active or after input of length or angle
+the start position is automatically set after point input and before call of OnPoint
+after start of an interaction StartPosition is null
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.Description">
+            <summary>
+Description of undo step for this interaction.
+</summary>
+            <remarks>
+                <para>This text is used as description of undo step which is being created to handle changes made in method OnSuccess.
+Because the undo step is created just before OnSuccess is called it is necessary to set the description 
+before this method is invoked (before ReqeustCode::Success is returned).</para>
+                <para>If the interaction is being started by a button, P8 sets a default description the same as tooltip of the button.</para>
+            </remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsPlacementFilterActive">
+            <summary>
+If true, then placement-filter is active.
+</summary>
+            <remarks>
+If active then framework uses 
+<see text="OnFilterPlacement" cref="!:Eplan::EplApi::EServices::Ged::Interaction::OnFilterPlacement" />
+to determine if Placement should be included in selection.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.DraggingMouseCursor">
+            <summary>
+Mouse cursor which will be used for next dragging operation.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.SetStaticCursor(Eplan.EplApi.DataModel.StorableObject,Eplan.EplApi.Base.PointD)">
+            <summary>
+Sets <see text="StorableObject" cref="T:Eplan.EplApi.DataModel.StorableObject" />, that will be temporary drawn as Cursor Representation.
+</summary>
+            <remarks>
+The Static Cursor will not change its shape, size or location relative to the mouse pointer
+a dynamic cursor can be defined (additionally) by override of OnDrawCursor()
+Object can be transient (not stored in database).
+</remarks>
+            <param name="oStorableObject">
+                <see text="StorableObject" cref="T:Eplan.EplApi.DataModel.StorableObject" /> that will be temporary drawn as Cursor Representation.</param>
+            <param name="pntStartPos">The beginning of the new coordinate system in which placement is been drawn.</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.SetStaticCursor(Eplan.EplApi.DataModel.StorableObject[],Eplan.EplApi.Base.PointD)">
+            <summary>
+Sets <see text="StorableObjects" cref="T:Eplan.EplApi.DataModel.StorableObject" />, that will be temporary drawn as Cursor Representation. 
+</summary>
+            <remarks>
+The Static Cursor will not change its shape, size or location relative to the mouse pointer
+a dynamic cursor can be defined (additionally) by override of OnDrawCursor().
+Objects can be transient (not stored in database).
+</remarks>
+            <param name="arrStorableObjects">
+                <see text="StorableObject" cref="T:Eplan.EplApi.DataModel.StorableObject" /> that will be temporary drawn as Cursor Representation.</param>
+            <param name="pntStartPos">The beginning of the new coordinate system in which placements are been drawn.</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.ClearCursor">
+            <summary>
+Remove Cursor-Representation.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.SetRubberboxCursor">
+            <summary>
+Active Rubber-box cursor.
+</summary>
+            <remarks>
+During mouse move a temporary rectangle is visible between last
+point reported by OnPoint() and the current cursor position.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.SetRubberlineCursor">
+            <summary>
+Active Rubber-line cursor.
+</summary>
+            <remarks>
+During mouse move a temporary (rubber-) line is visible between last
+point reported by OnPoint() and the current cursor position
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.RootPlacement3D">
+            <summary>
+Root placement to which the editor belongs.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.InstallationSpace">
+            <summary>
+Installation space, the editor belongs to.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.Page">
+            <summary>
+Page, the editor belongs to.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.Project">
+            <summary>
+Project, the editor belongs to.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.PromptForCommandLine">
+            <summary>
+Prompt for command line.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.PromptForStatusLine">
+            <summary>
+Prompt for status line.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsObjectPlacementModeActive">
+            <summary>
+Returns <c>true</c>, if special object placement mode is active.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsSelectionInteraction">
+            <summary>
+Returns <c>true</c>, if interaction is a helper interaction to select placements.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsInsertInteraction">
+            <summary>
+Returns <c>true</c>, if interaction is used to insert one ore more placements on page.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.IsEnabled(System.String,Eplan.EplApi.ApplicationFramework.ActionCallingContext)">
+            <summary>
+Returns true, if interaction should be enabled in menu
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsReadOnly">
+            <summary>
+Returns <c>true</c>, if function does not change the project database.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.IsAutorestartEnabled">
+            <summary>
+Returns <c>true</c>, if interaction should restart after stop.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnCursorMove(Eplan.EplApi.EServices.Ged.Position!System.Runtime.CompilerServices.IsConst)">
+            <summary>
+Is called on move of cursor by mouse or keys.
+</summary>
+            <remarks>
+The function is called before drawing the cursor.
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnRestart">
+            <summary>
+Is called after restart of the interaction.
+</summary>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Stop</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnAngle(System.Double)">
+            <summary>
+Is called after input of an angle by the user.
+</summary>
+            <remarks>
+If this interaction needs an angle, the graphical editor changes to an angle input mode.
+In this case, the user has define an angle by a click into the CAD window or by typing
+the angle into the command line window.
+</remarks>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Stop</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnLength(System.Double)">
+            <summary>
+Is called after input of length.
+</summary>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Stop</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnReturnFromSubInteraction(System.Boolean,Eplan.EplApi.EServices.Ged.Interaction!System.Runtime.CompilerServices.IsConst)">
+            <summary>
+Is called on end of sub-interaction.
+</summary>
+            <param name="bSuccessFull">If <c>true</c> sub-interaction finish with 
+<see text="Success" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" />.</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnInputFinish">
+            <summary>
+Is called after special input operation has finished.
+</summary>
+            <remarks>For example the input sequence of the vertexes
+for a polyline. Usually this function is called, when the user
+has pressed the SPACE key.
+</remarks>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnEdgeBelowMouse(System.Boolean@,Eplan.EplApi.Base.PointD3D,Eplan.EplApi.Base.PointD3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after edge was found below the mouse pointer.
+</summary>
+            <param name="bFound">If set to <c>true</c> edge will be highlighted or used in selection.</param>
+            <param name="pntStart">Beginning of selected edge.</param>
+            <param name="pntEnd">End of selected edge.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="iDetailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnFaceBelowMouse(System.Boolean@,Eplan.EplApi.Base.PointD3D[],System.Windows.Media.Media3D.Vector3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after face was found below the mouse pointer.
+</summary>
+            <param name="bFound">If set to <c>true</c> edge will be highlighted or used in selection.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="iDetailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnVertexBelowMouse(System.Boolean@,Eplan.EplApi.Base.PointD3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after vertex was found below the mouse pointer.
+</summary>
+            <param name="bFound">If set to <c>true</c> edge will be highlighted or used in selection.</param>
+            <param name="pntLocation">Location of the selected vertex.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="detailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnFace(Eplan.EplApi.Base.PointD3D[],System.Windows.Media.Media3D.Vector3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after face of a 3D mesh was selected by user.
+</summary>
+            <param name="arrPoints">Vertexes of the selected edge.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="iDetailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnEdge(Eplan.EplApi.Base.PointD3D,Eplan.EplApi.Base.PointD3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after edged of a 3D mesh was selected by user.
+</summary>
+            <param name="pntStart">Beginning of the selected edge.</param>
+            <param name="pntEnd">End of the selected edge.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="iDetailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnVertex(Eplan.EplApi.Base.PointD3D,Eplan.EplApi.DataModel.StorableObject,System.Int32)">
+            <summary>
+Is called after vertex of a 3D mesh was selected by user.
+</summary>
+            <param name="pntLocation">Location of the selected vertex.</param>
+            <param name="oStorableObject">StorableObject which has been selected.</param>
+            <param name="iDetailId" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnMouseLeavingWindow(Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called after Mouse leave the window.
+</summary>
+            <remarks>This method is invoke while dragging operation if 
+<see text="OnStartDrag" cref="M:Eplan.EplApi.EServices.Ged.Interaction.OnStartDrag(Eplan.EplApi.EServices.Ged.Position)" />
+returned <see text="SystemDrag" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" />.</remarks>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnFilterElement(Eplan.EplApi.DataModel.StorableObject)">
+            <summary>
+Is called by framework to determine if oObject should be included in selection.
+</summary>
+            <remarks>In 3d view object which can be selected is being highlighted.</remarks>
+            <param name="oStorableObject">
+                <see text="StorableObject" cref="T:Eplan.EplApi.DataModel.StorableObject" /> 
+which will be examine.</param>
+            <returns>If <c>true</c> placement will be included into selection.</returns>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Interaction.WereLogicalPlacementsChanged">
+            <summary>
+Returns true, if logical placements were changed.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnCancel">
+            <summary>
+Is called after abort of interaction.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnPageChange">
+            <summary>
+Is called, if the associated page was changed.
+</summary>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnSuccess(Eplan.EplApi.EServices.Ged.InteractionContext)">
+            <summary>
+Is called after successful input of all necessary data as reaction to the request code Success
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnReactivate">
+            <summary>
+Is called after stop of the current interaction and this interaction is reactivated.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnDeactivate">
+            <summary>
+Is called after start of a new interaction with same or higher priority.
+In this case the current interaction is deactivated until the new interaction stops.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnChar(Eplan.EplApi.EServices.Ged.Position,System.Char)">
+            <summary>
+Is called after keyboard inputs by the user.
+</summary>
+            <param name="oPosition">
+Is the current position of CAD cursor.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnCalculateStaticCursorPos(Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called to manipulate the position of the static CAD cursor.
+</summary>
+            <param name="oPosition">
+Is the current position of CAD cursor.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnDrawCursor(Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called to get drawable objects for the cursor representation.
+</summary>
+            <remarks>This objects may be transient (not stored in the database).</remarks>
+            <param name="oPosition">
+Is the current position of cad cursor.
+</param>
+            <returns>Array of object drawn under the Cursor.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnSpecialEvent(Eplan.EplApi.EServices.Ged.InteractionEvent)">
+            <summary>
+Special event has occurred. Usually caused by user input.
+</summary>
+            <param name="pEvent">
+Information about event.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnElementFound(Eplan.EplApi.EServices.Ged.Position,Eplan.EplApi.DataModel.StorableObject)">
+            <summary>
+Is called, when the placement below the mouse pointer changes as result of mouse movement.
+</summary>
+            <param name="oPosition">
+Current position of cad cursor.
+</param>
+            <param name="oStorableObject">
+A placement below mouse. Will be null, if no placement is below the mouse pointer.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnSelect(Eplan.EplApi.DataModel.StorableObject[],Eplan.EplApi.EServices.Ged.SelectionContext)">
+            <summary>
+Is called after object selection in the graphical editor by user.
+</summary>
+            <param name="arrSelectedObjects">
+Array containing the selected placements.
+</param>
+            <param name="oContext">
+Information about the selection operation.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Success</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnCalculateCursorPos(Eplan.EplApi.EServices.Ged.Position,Eplan.EplApi.EServices.Ged.SnapTypes)">
+            <summary>
+Is called to calculate the cursor position.
+</summary>
+            <param name="pos">
+Current position of cad cursor.
+</param>
+            <param name="eSnapType">
+Type of snap used for calculating cursor position.
+</param>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnEndDrag(System.Boolean,Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called after end of a dragging operation.
+</summary>
+            <param name="bSuccess">
+if bSuccess == false, dragging was aborted by user
+</param>
+            <param name="oPosition">
+Current position of cad cursor.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnStartDrag(Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called after begin of a dragging operation.
+</summary>
+            <param name="oPosition">
+Current position of cad cursor.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Nothing</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnPoint(Eplan.EplApi.EServices.Ged.Position)">
+            <summary>
+Is called after a point input by user via mouse or keyboard.
+That means, that the user has clicked into the CAD Window or
+opened the command line and input the coordinates of a point.
+</summary>
+            <remarks>
+This call can occur only, if the Interaction needs the coordinates of a point.
+In this case, the graphical editor changes into point input mode.
+A mouse click has then the following result:
+The coordinates of the mouse position will be translated into world coordinates.
+Depending on Settings, the system may look for grid points or snap points
+</remarks>
+            <param name="oPosition">
+Current position of cad cursor.
+</param>
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Stop</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnStop">
+            <summary>
+Is called before an interaction stops.
+</summary>
+            <remarks>
+It is called after OnSuccess() or after OnCancel()
+</remarks>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.OnStart(Eplan.EplApi.EServices.Ged.InteractionContext)">
+            <summary>
+Is called after start of interaction
+</summary>
+            <param name="oContext" />
+            <returns>Default <see text="RequestCode" cref="T:Eplan.EplApi.EServices.Ged.RequestCode" /> 
+for this function is <c>Stop</c>.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.Finalize">
+            <summary>
+Non-deterministic Finalizer of Interaction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.Dispose">
+            <summary>
+Destructor for deterministic finalization of Interaction object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Interaction.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.Interaction">
+            <summary> 
+Base class for special GED interaction.
+</summary>
+            <remarks>
+                <para>Starting an interaction is done using action called 'XGedStartInteractionAction'. 
+<use name="P8_API_Example_EServices_Start_Interaction_1.cs.txt" /></para>
+            </remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.SnapTypes">
+            <summary>
+Type of snap.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.MouseCursorType">
+            <summary>
+Mouse cursor types which can be used in dragging operation.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.RequestCode">
+            <summary>
+Available request which can be done by interaction event handler.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionEvent.#ctor(XGedEvent*)">
+            <summary> 
+Constructor.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionEvent.Name">
+            <summary>
+Name of InsertionPoint that was snapped.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionEvent.Finalize">
+            <summary>
+Non-deterministic Finalizer of InteractionEvent object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionEvent.Dispose">
+            <summary>
+Destructor for deterministic finalization of InteractionEvent object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionEvent.op_Assign(Eplan.EplApi.EServices.Ged.InteractionEvent!System.Runtime.CompilerServices.IsConst!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary> 
+Assignment operator.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionEvent.#ctor(Eplan.EplApi.EServices.Ged.InteractionEvent!System.Runtime.CompilerServices.IsConst!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary> 
+Copy constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.InteractionEvent">
+            <summary> 
+This class is used to passed informations about event which has occurred.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionContext.#ctor(XGedSelectionContext!System.Runtime.CompilerServices.IsConst*)">
+            <summary> 
+Constructor.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionContext.SelectionRectangle">
+            <summary>
+Lower left corner of selection rectangle.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionContext.IsRectangleSelection">
+            <summary>
+Returns true, if rectangle is set.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionContext.SelectionPoint">
+            <summary>
+Returns point of single selection.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.SelectionContext.IsPointSelection">
+            <summary>
+Returns true, if point has been selected.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionContext.Finalize">
+            <summary>
+Non-deterministic Finalizer of SelectionContext object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.SelectionContext.Dispose">
+            <summary>
+Destructor for deterministic finalization of SelectionContext object.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.SelectionContext">
+            <summary> 
+This class is used to pass information current selection to interaction.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionContext.#ctor(XGedInteractionContext*)">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.InteractionContext.Placements">
+            <summary>
+Placements in this context.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionContext.Finalize">
+            <summary>
+Non-deterministic Finalizer of InteractionContext object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionContext.Dispose">
+            <summary>
+Destructor for deterministic finalization of InteractionContext object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.InteractionContext.#ctor">
+            <summary>
+Creates a new InteractionContext object.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.InteractionContext">
+            <summary> 
+This class is used to pass information about current state of environment and placements to GED interaction.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.AdditionalMateSnapped">
+            <summary>
+Returns true, if additional mate was found.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.BaseMateSnapped">
+            <summary>
+Returns true, if base mate was found.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.OnWorkplane">
+            <summary>
+Returns true, if final position is on work plane.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.MateSnapped">
+            <summary>
+Returns true, if PreConnectionSnap was snapped.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.InsertionPointSnapped">
+            <summary>
+Returns true, if InsertionPoint was snapped.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.GridSnapped">
+            <summary>
+Returns true, if grid-snap was found.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.PointSnapped">
+            <summary>
+Returns true, if object-snap was found.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.IsCtrlKeyPressed">
+            <summary>
+Returns true, if ctrl key was pressed at the moment, when position was stored.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.IsShiftKeyPressed">
+            <summary>
+Returns true, if shift key was pressed at the moment, when position was stored.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.op_Implicit(Eplan.EplApi.EServices.Ged.Position)~Eplan.EplApi.Base.PointD3D">
+            <summary>
+Used in conversion from <see text="PointD3D" cref="T:Eplan.EplApi.Base.PointD" /> to the
+<c>Position</c> object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.op_Implicit(Eplan.EplApi.EServices.Ged.Position)~Eplan.EplApi.Base.PointD">
+            <summary>
+Used in conversion from <see text="PointD" cref="T:Eplan.EplApi.Base.PointD" /> to the
+<c>Position</c> object.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.Direction">
+            <summary>
+Direction of the 3D search vector
+orthogonal to the screen surface
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.FinalPosition">
+            <summary>
+Final Position of CAD Cursor in world coordinates.
+</summary>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.OrthoPosition">
+            <summary>
+Cursor position considering ortho-mode.
+</summary>
+            <remarks>
+If ortho-mode is off, then this position is the same as SnapPosition
+does not consider Mates.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.SnapPosition">
+            <summary>
+Position found snap point near mouse position.
+</summary>
+            <remarks>This function does not consider ortho-mode or mates.</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.CursorPosition">
+            <summary>
+Position of mouse in the world coordinate system
+</summary>
+            <remarks> This function does not consider grid-snap, object-snap ortho-mode or mates.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Ged.Position.ScreenPosition">
+            <summary>
+Position of mouse in the system (Windows) coordinate system.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.Finalize">
+            <summary>
+Non-deterministic Finalizer of Context object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.Dispose">
+            <summary>
+Destructor for deterministic finalization of Position object.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.op_Assign(Eplan.EplApi.EServices.Ged.Position!System.Runtime.CompilerServices.IsConst!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary> 
+Assignment constructor.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.#ctor(Eplan.EplApi.Base.PointD3D)">
+            <summary> 
+constructor.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.#ctor(Eplan.EplApi.Base.PointD)">
+            <summary> 
+constructor.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.#ctor(System.String)">
+            <summary> 
+constructor.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.#ctor(Eplan.EplApi.EServices.Ged.Position!System.Runtime.CompilerServices.IsConst!System.Runtime.CompilerServices.IsImplicitlyDereferenced)">
+            <summary> 
+Copy constructor.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Ged.Position.#ctor">
+            <summary> 
+Default constructor.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Ged.Position">
+            <summary> 
+This class represents a mouse position.
+</summary>
+            <remarks>
+The class should be used only by Interaction methods. It cannot be used in a normal Action to determine the mouse position.
+</remarks>
+        </member>
+        <member name="P:Eplan.EplApi.EServices.Message.MessageState">
+            <summary>
+The MessageState determines the actual adjusted check type 
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Message.MessageStateType">
+            <summary>
+Message state types
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Message.DoHelp">
+            <summary>
+Called by EPLAN when the help text to the message should be shown.
+the function itself must take care to call the matching help system
+with the correct language. 
+The easiest way is to call a simple dialog or message box.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Message.GetMessageText">
+            <summary>
+Called by EPLAN when the message text should be shown. 
+</summary>
+            <remarks>
+To allow multilingualism in Eplan projects, it's not the message text 
+itself that will be saved in the project but well-defined properties which 
+must be language independent. 
+The function itself is responsible 
+for getting the text in the correct language. 
+Eplan provides special settings and functions to determine what language is actually used.
+
+The message text may contain place holders for substitution, e.g. "This here will be replaced: %1!s!" 
+A place holder begins with '%' followed by a serial number. 
+'!s!' will be replaced by the given text for substitution. 
+The message text will be saved in the project message database and should be language independent. 
+The text for substitution should be declared when the message will be added to the project.
+
+This message is called not only during a verification action but also when messages already existing in a project
+(generated by earlier verifications) have to be displayed.
+</remarks>
+            <returns>
+The message's text in correct language
+</returns>
+            <seealso text="Eplan.EplApi.EServices.MessageManager" cref="!:Eplan::EplApi::EServices::MessageManager" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.Message.OnRegister(System.String@,Eplan.EplApi.EServices.IMessage.Region@,System.Int32@,Eplan.EplApi.EServices.IMessage.Classification@,System.Int32@)">
+            <summary>
+Called by EPLAN when the new project message is added to the
+system. If a new project message was added to a registered
+add-in, the add-in must be registered over again.
+</summary>
+            <param name="eRegion">The new project message will
+                      be added to this <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />.
+                      Add\-ins should be use region
+                      ePRJMSG_REGION_EXTERNALS. </param>
+            <param name="iMessageId">serial number inside the
+                         chosen region </param>
+            <param name="eClassification">Default <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              of the new message. The <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              could be changed in the
+                              project setting dialog at run
+                              time. </param>
+            <param name="iOrdinal">The new message could
+                       overwrite an existing message
+                       which has the same <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                       and the same iMessageId, if
+                       the ordinal number of the new
+                       message is higher. (default\:
+                       20)</param>
+            <remarks>
+By overriding an existing message, it is only possible to
+change the message text, but not the classification etc.
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.Message">
+            <summary>
+Base class for electrotechnical messages.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IMessage.DoHelp">
+            <summary>
+Called by EPLAN when the help text to the message should be shown.
+the function itself must take care to call the matching help system
+with the correct language. 
+The easiest way is to call a simple dialog or message box.
+</summary>
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IMessage.GetMessageText">
+            <summary>
+Called by EPLAN when the message text should be shown. 
+</summary>
+            <remarks>
+To allow multilingualism in Eplan projects, it's not the message text 
+itself that will be saved in the project but well-defined properties which 
+must be language independent. 
+The function itself is responsible 
+for getting the text in the correct language. 
+Eplan provides special settings and functions to determine what language is actually used.
+
+The message text may contain place holders for substitution, e.g. "This here will be replaced: %1!s!" 
+A place holder begins with '%' followed by a serial number. 
+'!s!' will be replaced by the given text for substitution. 
+The message text will be saved in the project message database and should be language independent. 
+The text for substitution should be declared when the message will be added to the project.
+
+This message is called not only during a verification action but also when messages already existing in a project
+(generated by earlier verifications) have to be displayed.
+</remarks>
+            <returns>
+The message's text in correct language
+</returns>
+            <seealso text="Eplan.EplApi.EServices.MessageManager" cref="!:Eplan::EplApi::EServices::MessageManager" />
+        </member>
+        <member name="M:Eplan.EplApi.EServices.IMessage.OnRegister(System.String@,Eplan.EplApi.EServices.IMessage.Region@,System.Int32@,Eplan.EplApi.EServices.IMessage.Classification@,System.Int32@)">
+            <summary>
+Called by EPLAN when the new project message is added to the
+system. If a new project message was added to a registered
+add-in, the add-in must be registered over again.
+</summary>
+            <param name="eRegion">The new project message will
+                      be added to this <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />.
+                      Add\-ins should be use region
+                      ePRJMSG_REGION_EXTERNALS. </param>
+            <param name="iMessageId">serial number inside the
+                         chosen region </param>
+            <param name="eClassification">Default <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              of the new message. The <see text="Eplan.EplApi.EServices.IMessage.Classification" cref="T:Eplan.EplApi.EServices.IMessage.Classification" />
+                              could be changed in the
+                              project setting dialog at run
+                              time. </param>
+            <param name="iOrdinal">The new message could
+                       overwrite an existing message
+                       which has the same <see text="Eplan.EplApi.EServices.IMessage.Region" cref="T:Eplan.EplApi.EServices.IMessage.Region" />
+                       and the same iMessageId, if
+                       the ordinal number of the new
+                       message is higher. (default\:
+                       20)</param>
+            <remarks>
+By overriding an existing message, it is only possible to
+change the messge text, but not the classification etc.
+</remarks>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IMessage.ProjectMessageCreationType">
+            <summary>
+Methods by which a project message have been created.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IMessage.Classification">
+            <summary>
+Pre- defined classifications for project messages; every project 
+message must be assigned to one of these classifications, other values 
+will not be supported. The classification of a project message 
+could be changed in the settings dialog at run time.
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IMessage.Region">
+            <summary>
+Predefined regions for project messages; every project 
+message must be assigned to one of these regions, other values 
+will not be supported
+</summary>
+        </member>
+        <member name="T:Eplan.EplApi.EServices.IMessage">
+            <summary>
+Interface declaration for an electrotechnical message in EPLAN.
+If an add-in wants to add an undefined project message to EPLAN projects 
+this interface must be implemented by a class of the add-in.
+</summary>
+        </member>
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'P:Eplan.EplApi.EServices.PartVerification.VerificationPermission'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.Add(Eplan.EplApi.EServices.BaseProjectMessage)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,System.Boolean,Eplan.EplApi.DataModel.StorableObject,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.Add(Eplan.EplApi.EServices.BaseProjectMessage)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,System.Boolean,Eplan.EplApi.DataModel.StorableObject,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'P:Eplan.EplApi.EServices.PartVerification.VerificationPermission'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PartVerification.DoErrorMessage(Eplan.EplApi.MasterData.MDPartsDatabaseItem,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'P:Eplan.EplApi.EServices.PartVerification.VerificationPermission'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.BaseProjectMessage.#ctor(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,System.String,System.String,System.String)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.Add(Eplan.EplApi.EServices.BaseProjectMessage)'. -->
+        <!-- Discarding badly formed XML document comment for member 'M:Eplan.EplApi.EServices.PrjMessagesCollection.AddMessage(Eplan.EplApi.EServices.IMessage.Region,System.Int32,System.String,Eplan.EplApi.DataModel.StorableObject,System.Boolean,Eplan.EplApi.DataModel.StorableObject,System.String)'. -->
+    </members>
+</doc>

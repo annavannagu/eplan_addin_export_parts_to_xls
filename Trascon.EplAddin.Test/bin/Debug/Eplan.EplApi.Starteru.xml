@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Eplan.EplApi.Starteru</name>
+    </assembly>
+    <members>
+        <member name="T:Eplan.EplApi.Starter.EplanSignedAssemblyAttribute">
+             <summary>
+             EplanAssemblyAttribute is the attribute to identify an assembly used for eplan.
+             This Attribute is required when an assembly uses an own licence.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanSignedAssemblyAttribute.#ctor">
+            <summary> 
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanSignedAssemblyAttribute.#ctor(System.Boolean)">
+            <summary> 
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:Eplan.EplApi.Starter.EplanSignedAssemblyAttribute.IsEplanAssembly">
+            <summary> 
+            Tells this assembly is an eplan assembly. The licence of this assembly is checked.
+            </summary>
+        </member>
+        <member name="T:Eplan.EplApi.Starter.AssemblyResolver">
+            <summary>
+              The class AssemblyResolver does all things needed to resolve the Eplan Api dlls.
+              When a bin path is specified, all Eplan Api dlls inside can be loaded.
+            </summary>  
+            
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.#ctor">
+            <summary>
+            Create one AssemblyResolver. This will automatically add an AssemblyResolve Event Handler for
+            this domain.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.SetEplanBinPath(System.String)">
+            <summary>
+            Set the Eplan bin path. Note: This path exists once. Changing it will influence the
+            application. The eplan Platform path (with the Api dlls) is set automatically.
+            </summary>
+            <param name="strEplanBinPath">the Eplan bin path where the w3u.exe of your variant is in (p.e. Electric P8)</param>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown when directory cannot be found.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when path is null.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when path contains invalid characters such as ", &lt;, &gt;, or |.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when no Platform path can be found (with API dlls)</exception> 
+            <remarks>
+            The eplan bin path is the bin path with the w3u.exe you start normally.
+            </remarks>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.GetEplanBinPath">
+            <summary>
+            Get the Eplan bin path. 
+            The Eplan bin path where the w3u.exe of your variant is in (p.e. Electric P8)
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.SetBinPathsWithAppMod(System.String,System.String)">
+            <summary>
+            Set the Platform bin path. 
+            The variant path will be searched with the help of the applicationModifier. 
+            </summary>
+            <param name="strPlatformBinPath">the path where all Eplan.EplApi.*.dll are in. (And the W3Sharedu.dll)</param>
+            <param name="strAppMod">the wanted ApplicationModifer</param>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown when directory cannot be found.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when path is null.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when path contains invalid characters such as ", &lt;, &gt;, or |.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when the correct variant cannot found.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when no Variant path can be found (with W3u.exe and install.xml)</exception> 
+            <remarks>
+            The Platform bin path is the bin path with all Eplan.EplApi.*.dll and W3Sharedu.dll
+            This function searches the correct variant. This may be slow.
+            </remarks>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.SetBinPaths(System.String,System.String)">
+            <summary>
+            Set the bin paths. 
+            </summary>
+            <param name="strPlatformBinPath">the path where all Eplan.EplApi.*.dll are in. (And the W3Sharedu.dll)</param>
+            <param name="strEplanBinPath">the bin path of the variant w3u.exe. </param>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown when directories cannot be found.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when path is null.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when path contains invalid characters such as ", &lt;, &gt;, or |.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when the correct variant cannot found.</exception> 
+            <exception cref="T:System.ArgumentException">Thrown when no Variant path can be found (with W3u.exe and install.xml)</exception> 
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.GetPlatformBinPath">
+            <summary>
+            Get the Platform bin path. 
+            The bin path where the w3Sharedu.dll is in and all your API dlls
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.PinToEplan">
+            <summary>
+            Pin an offline application to a eplan application.
+            When the eplan bin path is known, an Offline Application using the Eplan Api dll can pinned to this version.
+            This means all referenced Eplan Api dlls will be loaded. Note: For already loaded linked dlls the AssemblyResolve
+            event is not fired.
+            </summary>
+            <example>
+            This code is in a separate exe or dll. Its not allowed to link directly some EPLAN dlls from the bin path.
+            (This causes an error at start when the dlls are not available.) Separate all Eplan references in another dll 
+            and link to this. The Class "EplanAppStarter" can be defined in this dll and contains you code.
+            <code lang="C#">
+            // Use the finder to find the correct eplan version if not yet known
+            EplanFinder finder = new EplanFinder();
+            string binPath = finder.SelectEplanVersion();
+            
+            // Now use the Assemblyresolver to let the program know where all eplan assemblies can be found.
+            AssemblyResolver resolver = new AssemblyResolver();
+            resolver.SetEplanBinPath(binPath);
+            // Pin to eplan does the actual preparation. All referenced eplan assemblies are loaded from the bin path.
+            resolver.PinToEplan();
+            
+            // Now the next (referenced) dll can be used. All Eplan references of this dll are known now.
+            EplanAppStarter app = new EplanAppStarter();
+            app.startEplan(binPath);
+            
+            //In the other dll, EplanAppStarter is implemented:
+                public class EplanAppStarter
+                {
+                    public void startEplan(string strVariant, string binPath)
+                    {
+                       Eplan.EplApi.System.EplApplication app = new Eplan.EplApi.System.EplApplication();
+                        app.EplanBinFolder = binPath;
+                        app.Init("");
+                    }
+                }
+            
+            </code>
+            </example>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.EplanResolveEventHandler(System.Object,System.ResolveEventArgs)">
+            <summary>
+            This is the AssemblyResolve Event for all Eplan Api dlls. When a Eplan Bin Path was specified,
+            all Eplan Api dlls in this path are loaded. 
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.AddAssemblyResolveEvent">
+            <summary>
+            Add the Assembly Resolve Event for this domain.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.LoadEplanAssembly(System.String)">
+            <summary>
+            Load one Assembly
+            </summary>
+            <param name="strAssemblyName">The name or path of the assembly</param>
+            <returns>the loaded Assembly</returns>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.FindPlatformFromEplanBinPath">
+            <summary>
+            Find the Platform path when the Eplan bin path is available. May Throw exceptions when not found.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.isValidEplanBinPath(System.String)">
+            <summary>
+            returns true when this is a valid Applicationmodifier to start eplan 
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.isValidVariant(System.String)">
+            <summary>
+            returns true when this is a valid Applicationmodifier to start eplan 
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.getAppModifier(System.String)">
+            <summary>
+            get the applicationmodifier from the install.xml
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.AssemblyResolver.isPlatformInPath(System.String)">
+            <summary>
+            check if the path is valid Platform path
+            </summary>
+        </member>
+        <member name="T:Eplan.EplApi.Starter.EplanData">
+             <summary>
+             EplanData contains all information about an eplan installation
+            </summary>
+        </member>
+        <member name="P:Eplan.EplApi.Starter.EplanData.EplanPath">
+             <summary>
+             EplanPath is the filepath to the eplan installation
+            </summary>
+        </member>
+        <member name="P:Eplan.EplApi.Starter.EplanData.EplanVariant">
+             <summary>
+             EplanVariant is the variant of the eplan installation, for example Fluid
+            </summary>
+        </member>
+        <member name="P:Eplan.EplApi.Starter.EplanData.EplanVersion">
+             <summary>
+             EplanVersion is the version number of the eplan installation, for example 1.8.6
+            </summary>
+        </member>
+        <member name="T:Eplan.EplApi.Starter.EplanFinder">
+             <summary>
+             EplanFinder is a helper class to find the fitting installed eplan version
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanFinder.GetInstalledEplanVersions(System.Collections.Generic.List{Eplan.EplApi.Starter.EplanData}@)">
+             <summary>
+             Get Eplan versions which are currently installed on local machine.
+            </summary>
+             <remarks>
+             Looks for 32 bit installations only
+             </remarks>
+             <param name="lEplanVersions">List to be filled with information 
+             about Eplan Versions currently installed on local machine.</param>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanFinder.GetInstalledEplanVersions(System.Collections.Generic.List{Eplan.EplApi.Starter.EplanData}@,System.Boolean)">
+             <summary>
+             Get Eplan versions which are currently installed on local machine. 
+            </summary>
+             <param name="lEplanVersions">List to be filled with information 
+             about Eplan Versions currently installed on local machine.</param>
+             <param name="b64bit">True - returns only 64 bit versions list. False - returns only 32-bit versions</param>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanFinder.SelectEplanVersion">
+             <summary>
+             Select one eplan appliaction installed on this machine. When there are more than one
+             installed, a select dialog will appear.
+            </summary>
+             <remarks>
+             Selects a 32 bit installation only. 
+             </remarks>
+             <returns>the bin path of the selected eplan application. Returns null if the user canceled.</returns>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.EplanFinder.SelectEplanVersion(System.Boolean)">
+             <summary>
+             Select one eplan appliaction installed on this machine. When there are more than one
+             installed, a select dialog will appear.
+            </summary>
+             <param name="b64bit">Select a 64 bit installation</param>
+             <returns>the bin path of the selected eplan application. Returns null if the user canceled.</returns>
+        </member>
+        <member name="T:Eplan.EplApi.Starter.SelectEplanDialog">
+             <summary>
+             SelectEplanDialog is a dialog to select an eplan installation of your computer
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.SelectEplanDialog.#ctor(System.Collections.Generic.List{Eplan.EplApi.Starter.EplanData}@)">
+             <summary>
+             Constructor with available versions
+            </summary>
+        </member>
+        <member name="F:Eplan.EplApi.Starter.SelectEplanDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.SelectEplanDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Eplan.EplApi.Starter.SelectEplanDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Eplan.EplApi.Starter.SelectEplanDialog.SelectedVersion">
+             <summary>
+             SelectedVersion is the currently selected eplan version in this dialog
+            </summary>
+        </member>
+    </members>
+</doc>

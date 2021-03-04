@@ -1,0 +1,1 @@
+E:\EPLAN\Test\Trascon.EplAddin.Test\obj\Debug\Trascon.EplAddin.ExportToXLS.csproj.CoreCompileInputs.cache
